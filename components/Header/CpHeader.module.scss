@@ -1,0 +1,14 @@
+@import "../../styles/variables.scss";
+
+.header {
+  align-items: center;
+  background-color: $color-background;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.menu {
+  color: $color-primary;
+}
