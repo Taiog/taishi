@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import SteelFrame from '../assets/steelframe.jpg';
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
@@ -18,11 +17,11 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <div
           style={{
-            backgroundImage: `url(https://www.pbctoday.co.uk/news/wp-content/uploads/2019/10/image001.jpg)`,
+            backgroundImage: `url(./main.jpeg)`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            height: '60vh',
+            height: '40vh',
             width: '100%',
           }}
         >
