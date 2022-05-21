@@ -12,12 +12,15 @@ import Image from 'next/image';
 import { FiTarget } from 'react-icons/fi';
 import { GiFlagObjective } from 'react-icons/gi';
 import { ImEye } from 'react-icons/im';
+import { useIntl } from 'react-intl';
 import QuemSomos from '../assets/quemSomos.jpg';
 import TaishiSolo from '../assets/taishi-text.svg';
 import CpValueCard from '../components/ValueCard/CpValueCard';
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
+  const { formatMessage } = useIntl();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -75,13 +78,25 @@ const Home: NextPage = () => {
         <section className={styles.valores}>
           <CpValueCard
             icon={<FiTarget size={100} />}
-            title="Valores"
+            title={formatMessage({
+              id: 'valores',
+              defaultMessage: 'Valores',
+            })}
           />
           <CpValueCard
             icon={<GiFlagObjective size={100} />}
-            title="Missao"
+            title={formatMessage({
+              id: 'missao',
+              defaultMessage: 'Missao',
+            })}
           />
-          <CpValueCard icon={<ImEye size={100} />} title="Visao" />
+          <CpValueCard
+            icon={<ImEye size={100} />}
+            title={formatMessage({
+              id: 'visao',
+              defaultMessage: 'Visao',
+            })}
+          />
         </section>
       </main>
 
