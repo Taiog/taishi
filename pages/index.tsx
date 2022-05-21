@@ -14,6 +14,7 @@ import { GiFlagObjective } from 'react-icons/gi';
 import { ImEye } from 'react-icons/im';
 import QuemSomos from '../assets/quemSomos.jpg';
 import TaishiSolo from '../assets/taishi-text.svg';
+import CpValueCard from '../components/ValueCard/CpValueCard';
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
@@ -72,63 +73,15 @@ const Home: NextPage = () => {
           </span>
         </section>
         <section className={styles.valores}>
-          <div className={styles.card}>
-            <Card
-              p="xl"
-              shadow="lg"
-              style={{
-                boxShadow:
-                  ' 0 1px 3px rgb(0 0 0 / 20%), rgb(0 0 0 / 20%) 0px 28px 23px -7px, rgb(0 0 0 / 4%) 0px 12px 12px -7px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <FiTarget size={100} />
-              <Text className={styles.cardText} weight="900">
-                Valores
-              </Text>
-            </Card>
-          </div>
-          <div className={styles.card}>
-            <Card
-              p="xl"
-              shadow="lg"
-              style={{
-                boxShadow:
-                  ' 0 1px 3px rgb(0 0 0 / 25%), rgb(0 0 0 / 25%) 0px 28px 23px -7px, rgb(0 0 0 / 4%) 0px 12px 12px -7px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <GiFlagObjective size={100} />
-              <Text className={styles.cardText} weight="900">
-                Missao
-              </Text>
-            </Card>
-          </div>
-          <div className={styles.card}>
-            <Card
-              p="xl"
-              shadow="lg"
-              style={{
-                boxShadow:
-                  ' 0 1px 3px rgb(0 0 0 / 25%), rgb(0 0 0 / 25%) 0px 28px 23px -7px, rgb(0 0 0 / 4%) 0px 12px 12px -7px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <ImEye size={100} />
-              <Text className={styles.cardText} weight="900">
-                Visao
-              </Text>
-            </Card>
-          </div>
+          <CpValueCard
+            icon={<FiTarget size={100} />}
+            title="Valores"
+          />
+          <CpValueCard
+            icon={<GiFlagObjective size={100} />}
+            title="Missao"
+          />
+          <CpValueCard icon={<ImEye size={100} />} title="Visao" />
         </section>
       </main>
 
