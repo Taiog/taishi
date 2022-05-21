@@ -8,7 +8,7 @@ import {
 } from 'react-icons/md';
 import { SupportedLocales } from '../../containers/CtLang';
 import IntlContext from '../../contexts/useIntl';
-import styles from './CpHeader.module.scss';
+import styles from './CpLangMenu.module.scss';
 
 const CpLangMenu: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,16 +55,15 @@ const CpLangMenu: NextPage = () => {
       onOpen={toggleDrawer}
       opened={isOpen}
       style={{
-        backgroundColor: '#fff',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        padding: '0.5em',
       }}
       transitionDuration={200}
       transitionTimingFunction="ease"
     >
       <Group
+        className={styles.menuItem}
         onClick={() => handleChangeLanguage(SupportedLocales.en)}
       >
         <ReactCountryFlag
@@ -79,6 +78,7 @@ const CpLangMenu: NextPage = () => {
         English
       </Group>
       <Group
+        className={styles.menuItem}
         onClick={() => handleChangeLanguage(SupportedLocales.pt)}
       >
         <ReactCountryFlag
@@ -93,6 +93,7 @@ const CpLangMenu: NextPage = () => {
         Português
       </Group>
       <Group
+        className={styles.menuItem}
         onClick={() => handleChangeLanguage(SupportedLocales.jp)}
       >
         <ReactCountryFlag
