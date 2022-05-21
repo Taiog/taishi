@@ -25,7 +25,7 @@ const Contato: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Container>
+        <Container className={styles.container}>
           <Title
             order={1}
             style={{

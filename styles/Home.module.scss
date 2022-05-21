@@ -39,6 +39,13 @@
 .valores {
   background-color: $color-background;
   padding: $spacing-medium;
+
+  @media (min-width: 390px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 100px;
+  }
 }
 
 .main {

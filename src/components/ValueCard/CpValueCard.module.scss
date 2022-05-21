@@ -9,5 +9,11 @@
 .card {
   margin: auto;
   padding-top: $spacing-medium;
-  width: 340;
+  width: 340px;
+
+  @media (min-width: 390px) {
+    margin: unset;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
