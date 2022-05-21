@@ -63,6 +63,7 @@ const CpFooter: NextPage = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'flex-end',
+          padding: '1rem 0',
         }}
       >
         <Text className={styles.addressText}>

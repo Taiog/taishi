@@ -1,7 +1,17 @@
-import { Title } from '@mantine/core';
+import {
+  Badge,
+  Button,
+  Card,
+  Group,
+  Text,
+  Title,
+} from '@mantine/core';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { FiTarget } from 'react-icons/fi';
+import { GiFlagObjective } from 'react-icons/gi';
+import { ImEye } from 'react-icons/im';
 import QuemSomos from '../assets/quemSomos.jpg';
 import TaishiSolo from '../assets/taishi-text.svg';
 import styles from '../styles/Home.module.scss';
@@ -60,6 +70,65 @@ const Home: NextPage = () => {
             aspernatur, eum, voluptas iure earum dolor laudantium
             eligendi!
           </span>
+        </section>
+        <section className={styles.valores}>
+          <div className={styles.card}>
+            <Card
+              p="xl"
+              shadow="lg"
+              style={{
+                boxShadow:
+                  ' 0 1px 3px rgb(0 0 0 / 20%), rgb(0 0 0 / 20%) 0px 28px 23px -7px, rgb(0 0 0 / 4%) 0px 12px 12px -7px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <FiTarget size={100} />
+              <Text className={styles.cardText} weight="900">
+                Valores
+              </Text>
+            </Card>
+          </div>
+          <div className={styles.card}>
+            <Card
+              p="xl"
+              shadow="lg"
+              style={{
+                boxShadow:
+                  ' 0 1px 3px rgb(0 0 0 / 25%), rgb(0 0 0 / 25%) 0px 28px 23px -7px, rgb(0 0 0 / 4%) 0px 12px 12px -7px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <GiFlagObjective size={100} />
+              <Text className={styles.cardText} weight="900">
+                Missao
+              </Text>
+            </Card>
+          </div>
+          <div className={styles.card}>
+            <Card
+              p="xl"
+              shadow="lg"
+              style={{
+                boxShadow:
+                  ' 0 1px 3px rgb(0 0 0 / 25%), rgb(0 0 0 / 25%) 0px 28px 23px -7px, rgb(0 0 0 / 4%) 0px 12px 12px -7px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <ImEye size={100} />
+              <Text className={styles.cardText} weight="900">
+                Visao
+              </Text>
+            </Card>
+          </div>
         </section>
       </main>
 
