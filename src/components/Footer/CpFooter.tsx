@@ -1,7 +1,7 @@
 import { Button, Container, Space, Stack, Text } from '@mantine/core';
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import Logo from '../../assets/logo.svg';
+import Logo from '../../../assets/logo.svg';
 import styles from './CpFooter.module.scss';
 
 const menuOptions = [

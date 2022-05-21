@@ -1,15 +1,23 @@
 import { Group, Menu, Text } from '@mantine/core';
 import type { NextPage } from 'next';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import ReactCountryFlag from 'react-country-flag';
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from 'react-icons/md';
+import { SupportedLocales } from '../../containers/CtLang';
+import IntlContext from '../../contexts/useIntl';
 import styles from './CpHeader.module.scss';
 
 const CpLangMenu: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { locale, setLocale } = useContext(IntlContext);
+
+  const handleChangeLanguage = (newLocale: SupportedLocales) => {
+    setLocale(newLocale);
+    setIsOpen(false);
+  };
 
   const toggleDrawer = () => {
     setIsOpen((prev) => !prev);
@@ -19,45 +27,28 @@ const CpLangMenu: NextPage = () => {
     <Menu
       control={
         <button className={styles.menuPressable}>
-          {isOpen ? (
-            <>
-              <Group
+          <>
+            <Group
+              style={{
+                gap: '2px',
+              }}
+            >
+              <ReactCountryFlag
+                countryCode={locale.toUpperCase()}
                 style={{
-                  gap: '2px',
+                  width: '2em',
+                  height: '2em',
                 }}
-              >
-                <ReactCountryFlag
-                  countryCode="BR"
-                  style={{
-                    width: '2em',
-                    height: '2em',
-                  }}
-                  svg
-                  title="BR"
-                />
+                svg
+                title={locale.toUpperCase()}
+              />
+              {isOpen ? (
                 <MdOutlineKeyboardArrowUp size={30} />
-              </Group>
-            </>
-          ) : (
-            <>
-              <Group
-                style={{
-                  gap: '2px',
-                }}
-              >
-                <ReactCountryFlag
-                  countryCode="BR"
-                  style={{
-                    width: '2em',
-                    height: '2em',
-                  }}
-                  svg
-                  title="BR"
-                />
+              ) : (
                 <MdOutlineKeyboardArrowDown size={30} />
-              </Group>
-            </>
-          )}
+              )}
+            </Group>
+          </>
         </button>
       }
       onClose={toggleDrawer}
@@ -73,7 +64,9 @@ const CpLangMenu: NextPage = () => {
       transitionDuration={200}
       transitionTimingFunction="ease"
     >
-      <Group>
+      <Group
+        onClick={() => handleChangeLanguage(SupportedLocales.en)}
+      >
         <ReactCountryFlag
           countryCode="US"
           style={{
@@ -85,7 +78,9 @@ const CpLangMenu: NextPage = () => {
         />
         English
       </Group>
-      <Group>
+      <Group
+        onClick={() => handleChangeLanguage(SupportedLocales.pt)}
+      >
         <ReactCountryFlag
           countryCode="BR"
           style={{
@@ -97,7 +92,9 @@ const CpLangMenu: NextPage = () => {
         />
         Português
       </Group>
-      <Group>
+      <Group
+        onClick={() => handleChangeLanguage(SupportedLocales.jp)}
+      >
         <ReactCountryFlag
           countryCode="JP"
           style={{

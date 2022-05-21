@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import Logo from '../../assets/taishi.svg';
+import Logo from '../../../assets/taishi.svg';
 import styles from './CpHeader.module.scss';
 import CpLangMenu from './CpLangMenu';
 

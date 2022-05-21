@@ -8,7 +8,7 @@ import { ImEye } from 'react-icons/im';
 import { useIntl } from 'react-intl';
 import QuemSomos from '../assets/quemSomos.jpg';
 import TaishiSolo from '../assets/taishi-text.svg';
-import CpValueCard from '../components/ValueCard/CpValueCard';
+import CpValueCard from '../src/components/ValueCard/CpValueCard';
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
