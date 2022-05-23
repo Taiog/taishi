@@ -1,18 +1,28 @@
 import { Title } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useMemo } from 'react';
 import { FiTarget } from 'react-icons/fi';
 import { GiFlagObjective } from 'react-icons/gi';
 import { ImEye } from 'react-icons/im';
 import { useIntl } from 'react-intl';
-import QuemSomos from '../assets/quemSomos.jpg';
+import Hero2 from '../assets/lsf.jpg';
 import TaishiSolo from '../assets/taishi-text.svg';
 import CpValueCard from '../src/components/ValueCard/CpValueCard';
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
   const { formatMessage } = useIntl();
+  const { width } = useViewportSize();
+
+  const imageHeight = useMemo(() => {
+    if (width < 768) {
+      return 500;
+    }
+    return 120;
+  }, [width]);
 
   return (
     <div className={styles.container}>
@@ -30,43 +40,58 @@ const Home: NextPage = () => {
           style={{
             backgroundImage: `url(./main.jpeg)`,
             backgroundPosition: 'center',
-            backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            height: '50vh',
+            backgroundSize: 'cover',
+            height: '60vh',
             width: '100%',
           }}
         >
           <div className={styles.title}>
-            <Image height={500} src={TaishiSolo}></Image>
+            <Image height={imageHeight} src={TaishiSolo} />
           </div>
           <div className={styles.hero}>Light Steel Frame</div>
         </div>
         <section className={styles.section}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Possimus quidem architecto eligendi suscipit magnam iusto
-          consequatur. Facere dicta maxime aperiam corrupti in
-          aspernatur, eum, voluptas iure earum dolor laudantium
-          eligendi!
-        </section>
-        <section className={styles.section2}>
-          <Image src={QuemSomos}></Image>
-          <Title
-            order={1}
-            style={{
-              paddingBottom: '10px',
-              paddingTop: '10px',
-              textTransform: 'uppercase',
-            }}
-          >
-            Titulo da Section
-          </Title>
-          <span>
+          <div className={styles.section2container}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Possimus quidem architecto eligendi suscipit magnam iusto
             consequatur. Facere dicta maxime aperiam corrupti in
             aspernatur, eum, voluptas iure earum dolor laudantium
             eligendi!
-          </span>
+          </div>
+        </section>
+        <section className={styles.section2}>
+          <div className={styles.section2container}>
+            <div
+              className={styles.flexOne}
+              style={{
+                width: '100%',
+                height: '300px',
+                position: 'relative',
+              }}
+            >
+              <Image layout="fill" objectFit="contain" src={Hero2} />
+            </div>
+            <div className={styles.flexOne}>
+              <Title
+                order={1}
+                style={{
+                  paddingBottom: '10px',
+                  paddingTop: '10px',
+                  textTransform: 'uppercase',
+                }}
+              >
+                Titulo da Section
+              </Title>
+              <span>
+                Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Possimus quidem architecto eligendi suscipit
+                magnam iusto consequatur. Facere dicta maxime aperiam
+                corrupti in aspernatur, eum, voluptas iure earum dolor
+                laudantium eligendi!
+              </span>
+            </div>
+          </div>
         </section>
         <section className={styles.valores}>
           <CpValueCard

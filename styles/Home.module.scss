@@ -3,44 +3,85 @@
 .hero {
   background-color: $color-primary;
   font-family: "Montserrat", Sans-serif;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 900;
   opacity: .9;
   padding: 10px;
   position: relative;
   text-align: right;
   text-transform: uppercase;
-  top: 40%;
-  width: 95%;
+  top: 30%;
+
+  @media (min-width: 450px) {
+    width: 65%;
+  }
 }
 
 .section {
   background-color: $color-background;
+  display: flex;
   font-size: $font-medium;
   padding: $spacing-medium;
   text-align: justify;
+
+  @media (min-width: 450px) {
+    padding: $spacing-large;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .section2 {
   background-color: $color-primary;
+  display: flex;
+  flex-direction: column;
   font-size: $font-medium;
   padding: $spacing-medium;
-  text-align: justify;
+  
+  @media (min-width: 450px) {
+    padding: $spacing-large;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.section2container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: 450px) {
+    padding: $spacing-large;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
 }
 
 .title {
   background-color: $color-background;
   opacity: .9;
   position: relative;
-  top: 40%;
-  width: 70%;
+  top: 30%;
+  width: 60%;
 }
 
 .valores {
   background-color: $color-background;
-  padding: $spacing-medium;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: $spacing-medium;
+  padding-top: $spacing-medium;
 
-  @media (min-width: 390px) {
+  @media (min-width: 450px) {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -50,4 +91,15 @@
 
 .main {
   padding-top: 100px;
+}
+
+.img {
+  max-height: 300px;
+  width: 100%;
+}
+
+.flexOne {
+  @media (min-width: 450px) {
+    flex: 1,
+  }
 }
