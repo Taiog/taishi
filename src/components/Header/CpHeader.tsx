@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { FormattedMessage } from 'react-intl';
 import Logo from '../../../assets/taishi.svg';
 import styles from './CpHeader.module.scss';
 import CpLangMenu from './CpLangMenu';
@@ -13,31 +14,31 @@ import CpLangMenu from './CpLangMenu';
 const menuOptions = [
   {
     href: '/',
-    label: 'Início',
+    label: 'header.home',
   },
   {
     disabled: true,
     href: '/about',
-    label: 'Quem somos',
+    label: 'header.about',
   },
   {
     disabled: true,
     href: '/services',
-    label: 'Serviços',
+    label: 'header.services',
   },
   {
     disabled: true,
     href: '/light-steel-frame',
-    label: 'Light Steel Frame',
+    label: 'header.lsf',
   },
   {
     disabled: true,
     href: '/blog',
-    label: 'Blog',
+    label: 'header.blog',
   },
   {
     href: '/contato',
-    label: 'Contato',
+    label: 'header.contact',
   },
 ];
 
@@ -51,8 +52,10 @@ const CpHeader: NextPage = () => {
 
   return (
     <nav className={styles.header}>
-      <div>
-        <Image height={100} src={Logo} width={100} />
+      <div className={styles.logo}>
+        <Link href="/">
+          <Image height={100} src={Logo} width={100} />
+        </Link>
       </div>
       <div>
         {width >= 768 && (
@@ -66,7 +69,7 @@ const CpHeader: NextPage = () => {
                   size="lg"
                   variant="subtle"
                 >
-                  {option.label}
+                  <FormattedMessage id={option.label} />
                 </Button>
               </Link>
             ))}
@@ -102,7 +105,9 @@ const CpHeader: NextPage = () => {
               {menuOptions.map((option) => (
                 <Menu.Item key={option.label}>
                   <Link href={option.href}>
-                    <Text size="lg">{option.label}</Text>
+                    <Text size="lg">
+                      <FormattedMessage id={option.label} />
+                    </Text>
                   </Link>
                 </Menu.Item>
               ))}

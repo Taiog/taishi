@@ -1,6 +1,8 @@
 import { Button, Container, Space, Stack, Text } from '@mantine/core';
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
+import { FormattedMessage } from 'react-intl';
 import Logo from '../../../assets/logo.svg';
 import styles from './CpFooter.module.scss';
 
@@ -73,13 +75,15 @@ const CpFooter: NextPage = () => {
             <br></br>
             CEP 49015-260
           </Text>
-          <Button
-            className={styles.contact}
-            size="lg"
-            variant="outline"
-          >
-            Contato
-          </Button>
+          <Link href="/contato">
+            <Button
+              className={styles.contact}
+              size="lg"
+              variant="outline"
+            >
+              <FormattedMessage id="header.contact" />
+            </Button>
+          </Link>
         </Stack>
       </Container>
     </footer>

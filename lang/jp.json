@@ -1,4 +1,11 @@
 {
-  "valores": "valores",
-  "visao": "visao"
+  "header.about": "About Us",
+  "header.blog": "Blog",
+  "header.contact": "Contact",
+  "header.home": "Home",
+  "header.lsf": "Light Steel Frame",
+  "header.services": "Services",
+  "missao": "mission",
+  "valores": "values",
+  "visao": "vision"
 }

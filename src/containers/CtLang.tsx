@@ -9,16 +9,16 @@ export enum SupportedLocales {
   jp = 'jp',
 }
 
-const loadMessages = (locale: SupportedLocales) => {
+const loadMessages = async (locale: SupportedLocales) => {
   switch (locale) {
     case 'br':
-      return import('../../lang/br.json');
+      return await import('../../lang/br.json');
     case 'jp':
-      return import('../../lang/jp.json');
+      return await import('../../lang/jp.json');
     case 'us':
-      return import('../../lang/us.json');
+      return await import('../../lang/us.json');
     default:
-      return import('../../lang/jp.json');
+      return await import('../../lang/jp.json');
   }
 };
 
@@ -26,19 +26,27 @@ interface CtLangProps {
   children: React.ReactNode;
 }
 
+interface Message {
+  [key: string]: string;
+}
+
 const CtLang: NextPage<CtLangProps> = ({ children }) => {
-  const [messages, setMessages] = useState<any>(null);
-  const [locale, setLocale] = useState(SupportedLocales.en);
+  const [messages, setMessages] = useState<null | Message>(null);
+  const [locale, setLocale] = useState(SupportedLocales.pt);
 
   useEffect(() => {
-    loadMessages(locale).then((fetchedMessages) =>
-      setMessages(fetchedMessages)
-    );
+    loadMessages(locale).then((fetchedMessages) => {
+      setMessages(fetchedMessages.default);
+    });
   }, [locale]);
 
   const handleChangeLocale = (newLocale: SupportedLocales) => {
     setLocale(newLocale);
   };
+
+  if (!messages) {
+    return null;
+  }
 
   return (
     <IntlContext.Provider
