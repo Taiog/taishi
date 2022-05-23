@@ -3,18 +3,31 @@
 .hero {
   background-color: $color-primary;
   font-family: "Montserrat", Sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 900;
   opacity: .9;
   padding: 10px;
+  padding-left: 10vw;
   position: relative;
-  text-align: right;
   text-transform: uppercase;
   top: 30%;
+  width: 90%;
 
   @media (min-width: 450px) {
     width: 65%;
   }
+}
+
+.taishi {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  opacity: .9;
+  padding: 10px;
+  padding-left: 10vw;
+  position: relative;
+  text-transform: uppercase;
+  top: 40%;
 }
 
 .section {
