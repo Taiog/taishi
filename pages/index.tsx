@@ -1,4 +1,10 @@
-import { Title } from '@mantine/core';
+import {
+  Accordion,
+  Box,
+  Container,
+  Stack,
+  Title,
+} from '@mantine/core';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -7,6 +13,7 @@ import { GiFlagObjective } from 'react-icons/gi';
 import { ImEye } from 'react-icons/im';
 import { useIntl } from 'react-intl';
 import Hero2 from '../assets/lsf.jpg';
+import CpAccordionCard from '../src/components/Accordion/CpAccordionItem';
 import CpValueCard from '../src/components/ValueCard/CpValueCard';
 import styles from '../styles/Home.module.scss';
 
@@ -79,6 +86,11 @@ const Home: NextPage = () => {
               defaultMessage: 'Valores',
             })}
           />
+        </section>
+        <section className={styles.accordionSection}>
+          <Container>
+            <CpAccordionCard />
+          </Container>
         </section>
       </main>
 
