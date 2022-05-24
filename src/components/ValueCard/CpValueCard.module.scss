@@ -7,6 +7,9 @@
 }
 
 .card {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   margin: auto;
   padding-top: $spacing-medium;
   width: 340px;
@@ -16,4 +19,11 @@
     margin-left: 40px;
     margin-right: 40px;
   }
+}
+
+.cardInner {
+  background-color: $color-background;
+  height: 300px;
+  padding: $spacing-medium;
+  width: 300px;
 }

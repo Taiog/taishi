@@ -53,12 +53,20 @@ const CpHeader: NextPage = () => {
   return (
     <nav className={styles.header}>
       <Group className={styles.headerContainer}>
-        <div></div>
-        <div className={styles.logo}>
-          <Link href="/">
-            <Image height={200} src={Logo} width={200} />
-          </Link>
-        </div>
+        {width <= 768 ? (
+          <div className={styles.logo}>
+            <Link href="/">
+              <Image height={100} src={Logo} width={100} />
+            </Link>
+          </div>
+        ) : (
+          <div className={styles.logo}>
+            <Link href="/">
+              <Image height={200} src={Logo} width={200} />
+            </Link>
+          </div>
+        )}
+        <div />
         {width >= 768 && (
           <Group className={styles.navMenu} position="center">
             {menuOptions.map((option) => (

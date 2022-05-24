@@ -16,6 +16,7 @@ const CpValueCard: NextPage<CpValueCardProps> = ({
   return (
     <div className={styles.card}>
       <Card
+        className={styles.cardInner}
         p="xl"
         shadow="lg"
         style={{
@@ -28,7 +29,7 @@ const CpValueCard: NextPage<CpValueCardProps> = ({
         }}
       >
         {icon}
-        <Text className={styles.cardText} weight="900">
+        <Text className={styles.cardText} weight="700">
           {title}
         </Text>
       </Card>

@@ -19,6 +19,15 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;900&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com"
+            rel="preconnect"
+          />
+          <link href="https://fonts.gstatic.com" rel="preconnect" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;900&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body>
           <Main />
