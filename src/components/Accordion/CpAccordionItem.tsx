@@ -108,7 +108,7 @@ const CpAccordionCard: NextPage<CpAccordionCardProps> = ({
                 marginTop: 20,
                 textTransform: 'uppercase',
                 fontSize: '1.5rem',
-                fontFamily: 'Roboto',
+                fontFamily: 'Montserrat',
                 textAlign: 'center',
               }}
               weight="700"
@@ -123,7 +123,14 @@ const CpAccordionCard: NextPage<CpAccordionCardProps> = ({
               marginTop: 20,
             }}
           >
-            <Text align="center" className="text-center" weight="400">
+            <Text
+              align="center"
+              className="text-center"
+              style={{
+                fontFamily: 'Montserrat',
+              }}
+              weight="400"
+            >
               {character.content}
             </Text>
           </Box>

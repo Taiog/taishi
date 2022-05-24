@@ -60,7 +60,13 @@ const Home: NextPage = () => {
               <Image layout="fill" objectFit="contain" src={Hero2} />
             </div>
             <div className={styles.flexOne}>
-              <span>{formatMessage({ id: 'home.main' })}</span>
+              <span
+                style={{
+                  fontFamily: 'Montserrat',
+                }}
+              >
+                {formatMessage({ id: 'home.main' })}
+              </span>
             </div>
           </div>
         </section>
@@ -89,6 +95,18 @@ const Home: NextPage = () => {
         </section>
         <section className={styles.accordionSection}>
           <Container>
+            <Title
+              align="center"
+              order={2}
+              style={{
+                marginBottom: '1.5rem',
+                fontSize: '2.5rem',
+                textTransform: 'uppercase',
+                fontFamily: 'Montserrat',
+              }}
+            >
+              Vantagens
+            </Title>
             <CpAccordionCard />
           </Container>
         </section>

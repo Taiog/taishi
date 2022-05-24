@@ -76,6 +76,9 @@ const CpHeader: NextPage = () => {
                   disabled={option.disabled}
                   radius="sm"
                   size="lg"
+                  style={{
+                    fontFamily: 'Montserrat',
+                  }}
                   variant="subtle"
                 >
                   <FormattedMessage id={option.label} />
@@ -113,7 +116,12 @@ const CpHeader: NextPage = () => {
                 {menuOptions.map((option) => (
                   <Menu.Item key={option.label}>
                     <Link href={option.href}>
-                      <Text size="lg">
+                      <Text
+                        size="lg"
+                        style={{
+                          fontFamily: 'Montserrat',
+                        }}
+                      >
                         <FormattedMessage id={option.label} />
                       </Text>
                     </Link>
