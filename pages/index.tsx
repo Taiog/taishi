@@ -40,15 +40,6 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.hero}>Light Steel Frame</div>
         </div>
-        <section className={styles.section}>
-          <div className={styles.section2container}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Possimus quidem architecto eligendi suscipit magnam iusto
-            consequatur. Facere dicta maxime aperiam corrupti in
-            aspernatur, eum, voluptas iure earum dolor laudantium
-            eligendi!
-          </div>
-        </section>
         <section className={styles.section2}>
           <div className={styles.section2container}>
             <div
@@ -62,34 +53,11 @@ const Home: NextPage = () => {
               <Image layout="fill" objectFit="contain" src={Hero2} />
             </div>
             <div className={styles.flexOne}>
-              <Title
-                order={1}
-                style={{
-                  paddingBottom: '10px',
-                  paddingTop: '10px',
-                  textTransform: 'uppercase',
-                }}
-              >
-                Titulo da Section
-              </Title>
-              <span>
-                Lorem ipsum, dolor sit amet consectetur adipisicing
-                elit. Possimus quidem architecto eligendi suscipit
-                magnam iusto consequatur. Facere dicta maxime aperiam
-                corrupti in aspernatur, eum, voluptas iure earum dolor
-                laudantium eligendi!
-              </span>
+              <span>{formatMessage({ id: 'home.main' })}</span>
             </div>
           </div>
         </section>
         <section className={styles.valores}>
-          <CpValueCard
-            icon={<FiTarget size={100} />}
-            title={formatMessage({
-              id: 'valores',
-              defaultMessage: 'Valores',
-            })}
-          />
           <CpValueCard
             icon={<GiFlagObjective size={100} />}
             title={formatMessage({
@@ -102,6 +70,13 @@ const Home: NextPage = () => {
             title={formatMessage({
               id: 'visao',
               defaultMessage: 'Visao',
+            })}
+          />
+          <CpValueCard
+            icon={<FiTarget size={100} />}
+            title={formatMessage({
+              id: 'valores',
+              defaultMessage: 'Valores',
             })}
           />
         </section>

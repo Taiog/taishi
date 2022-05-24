@@ -52,14 +52,15 @@ const CpHeader: NextPage = () => {
 
   return (
     <nav className={styles.header}>
-      <div className={styles.logo}>
-        <Link href="/">
-          <Image height={100} src={Logo} width={100} />
-        </Link>
-      </div>
-      <div>
+      <Group className={styles.headerContainer}>
+        <div></div>
+        <div className={styles.logo}>
+          <Link href="/">
+            <Image height={200} src={Logo} width={200} />
+          </Link>
+        </div>
         {width >= 768 && (
-          <Group position="center">
+          <Group className={styles.navMenu} position="center">
             {menuOptions.map((option) => (
               <Link href={option.href} key={option.href}>
                 <Button
@@ -75,46 +76,46 @@ const CpHeader: NextPage = () => {
             ))}
           </Group>
         )}
-      </div>
-      <div>
-        <Group>
-          <CpLangMenu />
-          {width < 768 && (
-            <Menu
-              control={
-                <button className={styles.menuPressable}>
-                  {isOpen ? (
-                    <AiOutlineClose
-                      className={styles.menu}
-                      size={40}
-                    />
-                  ) : (
-                    <GiHamburgerMenu
-                      className={styles.menu}
-                      size={40}
-                    />
-                  )}
-                </button>
-              }
-              onClose={toggleDrawer}
-              onOpen={toggleDrawer}
-              opened={isOpen}
-              transitionDuration={200}
-              transitionTimingFunction="ease"
-            >
-              {menuOptions.map((option) => (
-                <Menu.Item key={option.label}>
-                  <Link href={option.href}>
-                    <Text size="lg">
-                      <FormattedMessage id={option.label} />
-                    </Text>
-                  </Link>
-                </Menu.Item>
-              ))}
-            </Menu>
-          )}
-        </Group>
-      </div>
+        <div>
+          <Group>
+            <CpLangMenu />
+            {width < 768 && (
+              <Menu
+                control={
+                  <button className={styles.menuPressable}>
+                    {isOpen ? (
+                      <AiOutlineClose
+                        className={styles.menu}
+                        size={40}
+                      />
+                    ) : (
+                      <GiHamburgerMenu
+                        className={styles.menu}
+                        size={40}
+                      />
+                    )}
+                  </button>
+                }
+                onClose={toggleDrawer}
+                onOpen={toggleDrawer}
+                opened={isOpen}
+                transitionDuration={200}
+                transitionTimingFunction="ease"
+              >
+                {menuOptions.map((option) => (
+                  <Menu.Item key={option.label}>
+                    <Link href={option.href}>
+                      <Text size="lg">
+                        <FormattedMessage id={option.label} />
+                      </Text>
+                    </Link>
+                  </Menu.Item>
+                ))}
+              </Menu>
+            )}
+          </Group>
+        </div>
+      </Group>
     </nav>
   );
 };

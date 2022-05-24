@@ -36,7 +36,7 @@ const menuOptions = [
 const CpFooter: NextPage = () => {
   return (
     <footer className={styles.footerContainer}>
-      <Container className={styles.footer}>
+      <Container className={styles.footer} size="lg">
         <div className={styles.imageContainer}>
           <Image
             height="100%"
