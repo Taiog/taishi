@@ -6,6 +6,7 @@ import {
   Text,
   Title,
 } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -21,6 +22,7 @@ import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
   const { formatMessage } = useIntl();
+  const { width } = useViewportSize();
 
   return (
     <div className={styles.container}>
@@ -52,13 +54,26 @@ const Home: NextPage = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 height: '100%',
+                padding: '0 5%',
               }}
             >
-              <Image alt="Random unsplash image" src={Taishi} />
+              <Image
+                alt="Random unsplash image"
+                height={width < 768 ? 800 : 170}
+                src={Taishi}
+              />
             </div>
           </div>
           <div className={styles.hero}>
-            <Title order={1}>Light Steel Frame</Title>
+            <Title
+              order={1}
+              style={{
+                fontSize: '1.6rem',
+                paddingLeft: '4%',
+              }}
+            >
+              Light Steel Frame
+            </Title>
           </div>
         </div>
         <section className={styles.section2}>
