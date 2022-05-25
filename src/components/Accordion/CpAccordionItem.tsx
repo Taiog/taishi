@@ -86,6 +86,7 @@ const CpAccordionCard: NextPage<CpAccordionCardProps> = ({
             justifyContent: 'center',
             padding: 20,
             background: '#fff',
+            boxShadow: '1px 1px 3px rgba(0,0,0,.25)',
             borderRadius: 3,
             minHeight: '350px',
           }}
@@ -110,6 +111,7 @@ const CpAccordionCard: NextPage<CpAccordionCardProps> = ({
                 fontSize: '1.5rem',
                 fontFamily: 'Montserrat',
                 textAlign: 'center',
+                color: '#038C4C',
               }}
               weight="700"
             >
@@ -129,6 +131,7 @@ const CpAccordionCard: NextPage<CpAccordionCardProps> = ({
               style={{
                 fontFamily: 'Montserrat',
                 textAlign: 'justify',
+                color: '#000',
               }}
               weight="400"
             >
