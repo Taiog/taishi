@@ -97,6 +97,7 @@ const Home: NextPage = () => {
               <span
                 style={{
                   fontFamily: 'Montserrat',
+                  textAlign: 'justify',
                 }}
               >
                 {formatMessage({ id: 'home.main' })}

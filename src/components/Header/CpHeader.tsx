@@ -101,6 +101,7 @@ const CpHeader: NextPage = () => {
                   style={{
                     fontFamily: 'Montserrat',
                     color: '#038C4C',
+                    fontWeight: '400',
                   }}
                   variant="subtle"
                 >

@@ -128,6 +128,7 @@ const CpAccordionCard: NextPage<CpAccordionCardProps> = ({
               className="text-center"
               style={{
                 fontFamily: 'Montserrat',
+                textAlign: 'justify',
               }}
               weight="400"
             >
