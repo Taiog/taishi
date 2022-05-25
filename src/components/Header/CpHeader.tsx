@@ -1,10 +1,11 @@
-import { Button, Group, Menu, Text } from '@mantine/core';
+import { ActionIcon, Button, Group, Menu, Text } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FormattedMessage } from 'react-intl';
 import Logo from '../../../assets/taishi.svg';
@@ -52,6 +53,17 @@ const CpHeader: NextPage = () => {
 
   return (
     <nav className={styles.header}>
+      <Group className={styles.icons}>
+        <ActionIcon variant="hover">
+          <FaWhatsapp fill="#038C4C" size={25} />
+        </ActionIcon>
+        <ActionIcon variant="hover">
+          <FaInstagram fill="#038C4C" size={25} />
+        </ActionIcon>
+        <ActionIcon variant="hover">
+          <FaFacebook fill="#038C4C" size={25} />
+        </ActionIcon>
+      </Group>
       <Group className={styles.headerContainer}>
         {width <= 768 ? (
           <div className={styles.logo}>
