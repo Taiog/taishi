@@ -51,7 +51,7 @@ const charactersList = [
     content:
       'Tenha mais conforto e tranquilidade no seu lar, o LSF oferece um melhor desempenho térmico e acústico para sua edificação.',
     icon: <FaThermometerQuarter color="#038C4C" size={50} />,
-    label: 'Desempenho termoacústico',
+    label: 'Desempenho',
   },
   {
     content:

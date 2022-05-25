@@ -1,6 +1,7 @@
 import {
   Accordion,
   Box,
+  Button,
   Container,
   Stack,
   Text,
@@ -11,8 +12,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { FiTarget } from 'react-icons/fi';
-import { GiFlagObjective } from 'react-icons/gi';
-import { ImEye } from 'react-icons/im';
+import { GiFlagObjective, GiLighthouse } from 'react-icons/gi';
+
 import { useIntl } from 'react-intl';
 import Hero2 from '../assets/lsf.jpg';
 import Taishi from '../assets/taishi-text.svg';
@@ -114,7 +115,7 @@ const Home: NextPage = () => {
             })}
           />
           <CpValueCard
-            icon={<ImEye size={100} />}
+            icon={<GiLighthouse size={100} />}
             title={formatMessage({
               id: 'visao',
               defaultMessage: 'Visao',
@@ -143,6 +144,25 @@ const Home: NextPage = () => {
               Vantagens
             </Title>
             <CpAccordionCard />
+            <Stack
+              align="center"
+              sx={(theme) => ({
+                paddingTop: 30,
+              })}
+            >
+              <Button
+                size="lg"
+                sx={{
+                  backgroundColor: '#038C4C',
+                  ':hover': {
+                    backgroundColor: '#10492F',
+                    transition: 'all 0.2s ease-in-out',
+                  },
+                }}
+              >
+                Saiba mais
+              </Button>
+            </Stack>
           </Container>
         </section>
       </main>

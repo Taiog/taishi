@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FormattedMessage } from 'react-intl';
-import Logo from '../../../assets/logo.svg';
+import Logo from '../../../assets/logoFooter.svg';
 import styles from './CpFooter.module.scss';
 
 const menuOptions = [
