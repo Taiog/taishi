@@ -68,13 +68,23 @@ const CpHeader: NextPage = () => {
         {width <= 768 ? (
           <div className={styles.logo}>
             <Link href="/">
-              <Image height={100} src={Logo} width={100} />
+              <Image
+                alt="Logo da empresa, um T de Taishi"
+                height={100}
+                src={Logo}
+                width={100}
+              />
             </Link>
           </div>
         ) : (
           <div className={styles.logo}>
             <Link href="/">
-              <Image height={200} src={Logo} width={200} />
+              <Image
+                alt="Logo da empresa, um T de Taishi"
+                height={200}
+                src={Logo}
+                width={200}
+              />
             </Link>
           </div>
         )}
@@ -90,6 +100,7 @@ const CpHeader: NextPage = () => {
                   size="lg"
                   style={{
                     fontFamily: 'Montserrat',
+                    color: '#038C4C',
                   }}
                   variant="subtle"
                 >
@@ -149,6 +160,3 @@ const CpHeader: NextPage = () => {
 };
 
 export default CpHeader;
-function useWindowSize(): { width: any } {
-  throw new Error('Function not implemented.');
-}

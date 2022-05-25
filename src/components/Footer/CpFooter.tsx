@@ -39,6 +39,7 @@ const CpFooter: NextPage = () => {
       <Container className={styles.footer} size="lg">
         <div className={styles.imageContainer}>
           <Image
+            alt="Logo da empresa, um T de Taishi"
             height="100%"
             layout="responsive"
             objectFit="contain"

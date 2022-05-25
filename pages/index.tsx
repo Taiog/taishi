@@ -3,6 +3,7 @@ import {
   Box,
   Container,
   Stack,
+  Text,
   Title,
 } from '@mantine/core';
 import type { NextPage } from 'next';
@@ -13,6 +14,7 @@ import { GiFlagObjective } from 'react-icons/gi';
 import { ImEye } from 'react-icons/im';
 import { useIntl } from 'react-intl';
 import Hero2 from '../assets/lsf.jpg';
+import Taishi from '../assets/taishi-text.svg';
 import CpAccordionCard from '../src/components/Accordion/CpAccordionItem';
 import CpValueCard from '../src/components/ValueCard/CpValueCard';
 import styles from '../styles/Home.module.scss';
@@ -43,9 +45,21 @@ const Home: NextPage = () => {
           }}
         >
           <div className={styles.title}>
-            <div className={styles.taishi}>Taishi</div>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '100%',
+              }}
+            >
+              <Image alt="Random unsplash image" src={Taishi} />
+            </div>
           </div>
-          <div className={styles.hero}>Light Steel Frame</div>
+          <div className={styles.hero}>
+            <Title order={1}>Light Steel Frame</Title>
+          </div>
         </div>
         <section className={styles.section2}>
           <div className={styles.section2container}>
@@ -57,7 +71,12 @@ const Home: NextPage = () => {
                 position: 'relative',
               }}
             >
-              <Image layout="fill" objectFit="contain" src={Hero2} />
+              <Image
+                alt="construcao de light steel frame"
+                layout="fill"
+                objectFit="contain"
+                src={Hero2}
+              />
             </div>
             <div className={styles.flexOne}>
               <span
