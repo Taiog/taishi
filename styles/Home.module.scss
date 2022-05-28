@@ -1,12 +1,12 @@
-@import "../styles/variables.scss";
+@import '../styles/variables.scss';
 
 .hero {
   background-color: $color-primary;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 25px;
   font-weight: 900;
   letter-spacing: 1.5px;
-  opacity: .9;
+  opacity: 0.9;
   padding: 10px;
   padding-left: 10vw;
   position: relative;
@@ -20,10 +20,10 @@
 }
 
 .taishi {
-  font-family: "Montserrat", Sans-serif;
+  font-family: 'Montserrat', Sans-serif;
   font-size: 25px;
   font-weight: 900;
-  opacity: .9;
+  opacity: 0.9;
   padding: 10px;
   padding-left: 10vw;
   position: relative;
@@ -31,58 +31,26 @@
   top: 40%;
 }
 
-.section {
-  background-color: #f2f2f2;
-  display: flex;
-  font-size: $font-medium;
-  padding: $spacing-medium;
-  text-align: justify;
-
-  @media (min-width: 450px) {
-    padding: 0;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-}
-
-.section2 {
-  background-color: #f2f2f2;
+.taishiTitle {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: $font-medium;
-  padding: $spacing-medium;
-  
-  @media (min-width: 450px) {
-    padding: 0;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
+  height: 100%;
+  justify-content: center;
+  padding: 0 5%;
 }
 
-.section2container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.backgroundImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
   width: 100%;
-
-  @media (min-width: 450px) {
-    padding: $spacing-large;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    padding-bottom: 70px;
-    padding-top: 70px;
-  }
 }
 
 .title {
   background-color: $color-background;
-  opacity: .9;
+  opacity: 0.9;
   position: relative;
   top: 30%;
   width: 60%;
@@ -114,11 +82,16 @@
 
 .flexOne {
   @media (min-width: 450px) {
-    flex: 1,
+    flex: 1;
   }
 }
 
 .accordionSection {
   background-color: #f2f2f2;
   padding: $spacing-large;
+}
+
+.lsfText {
+  font-size: '1.6rem';
+  padding-left: '4%';
 }

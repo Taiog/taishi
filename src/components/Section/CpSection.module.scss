@@ -1,0 +1,56 @@
+@import '../../../styles/variables.scss';
+
+.section {
+  background-color: #f2f2f2;
+  display: flex;
+  font-size: $font-medium;
+  padding: $spacing-medium;
+  text-align: justify;
+
+  @media (min-width: 450px) {
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.section2 {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  font-size: $font-medium;
+  padding: $spacing-medium;
+
+  @media (min-width: 450px) {
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.section2container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: 450px) {
+    padding: $spacing-large;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+}
+
+.flexOne {
+  @media (min-width: 450px) {
+    flex: 1;
+  }
+}
