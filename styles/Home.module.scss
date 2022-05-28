@@ -95,3 +95,19 @@
   font-size: '1.6rem';
   padding-left: '4%';
 }
+
+.heroStack {
+  background-color: #f2f2f2D7;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  position: relative;
+  top: 40%;
+  width: 80%;
+
+  @media (min-width: 450px) {
+    top: 30%;
+    max-height: 300px;
+  }
+}

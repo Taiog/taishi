@@ -1,4 +1,4 @@
-import { Button, Container, Stack, Title } from '@mantine/core';
+import { Box, Button, Container, Stack, Title } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -7,8 +7,9 @@ import { FiTarget } from 'react-icons/fi';
 import { GiFlagObjective, GiLighthouse } from 'react-icons/gi';
 
 import { useIntl } from 'react-intl';
+// import Taishi from '../assets/Nome Taishi solo.png';
+import Taishi from '../assets/Taishi horizontal pequeno.svg';
 import Hero2 from '../assets/lsf.jpg';
-import Taishi from '../assets/taishi-text.svg';
 import CpAdvantagesSection from '../src/components/AdvantagesSection/CpAdvantagesSection';
 import CpSection from '../src/components/Section/CpSection';
 import CpValueCard from '../src/components/ValueCard/CpValueCard';
@@ -33,20 +34,44 @@ const Home: NextPage = () => {
             backgroundImage: `url(./main.jpeg)`,
           }}
         >
-          <div className={styles.title}>
-            <div className={styles.taishiTitle}>
-              <Image
-                alt="Random unsplash image"
-                height={width < 768 ? 800 : 170}
-                src={Taishi}
-              />
-            </div>
-          </div>
-          <div className={styles.hero}>
-            <Title className={styles.lsfText} order={1}>
+          <Stack className={styles.heroStack}>
+            {/* <Box
+              sx={{
+                backgroundColor: '#fff',
+                width: '50%',
+                padding: 10,
+              }}
+            > */}
+            <Image
+              alt="Texto com logo do Taishi Light Steel Frame"
+              height={width < 768 ? 1000 : 400}
+              src={Taishi}
+            />
+            {/* </Box> */}
+            {/* <Box
+              sx={{
+                backgroundColor: 'green',
+                width: '60%',
+                padding: 10,
+              }}
+            >
               Light Steel Frame
-            </Title>
-          </div>
+            </Box> */}
+            {/* <div className={styles.title}>
+              <div className={styles.taishiTitle}>
+                <Image
+                  alt="Random unsplash image"
+                  height={width < 768 ? 800 : 170}
+                  src={Taishi}
+                />
+              </div>
+            </div>
+            <div className={styles.hero}>
+              <Title className={styles.lsfText} order={1}>
+                Light Steel Frame
+              </Title>
+            </div> */}
+          </Stack>
         </div>
         <CpSection imageSrc={Hero2} text="home.main" />
         <section className={styles.valores}>

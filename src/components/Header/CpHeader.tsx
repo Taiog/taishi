@@ -78,9 +78,9 @@ const CpHeader: NextPage = () => {
             <Link href="/">
               <Image
                 alt="Logo da empresa, um T de Taishi"
-                height={200}
+                height={100}
                 src={Logo}
-                width={200}
+                width={100}
               />
             </Link>
           </div>
