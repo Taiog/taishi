@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { FiTarget } from 'react-icons/fi';
 import { GiFlagObjective, GiLighthouse } from 'react-icons/gi';
 
+import { useState } from 'react';
 import { useIntl } from 'react-intl';
 // import Taishi from '../assets/Nome Taishi solo.png';
 import Taishi from '../assets/Taishi horizontal pequeno.svg';
@@ -15,9 +16,28 @@ import CpSection from '../src/components/Section/CpSection';
 import CpValueCard from '../src/components/ValueCard/CpValueCard';
 import styles from '../styles/Home.module.scss';
 
+export interface ValueCardsI {
+  mission: boolean;
+  values: boolean;
+  vision: boolean;
+}
+
 const Home: NextPage = () => {
   const { formatMessage } = useIntl();
   const { width } = useViewportSize();
+
+  const [valueCards, setValueCards] = useState<ValueCardsI>({
+    mission: false,
+    values: false,
+    vision: false,
+  });
+
+  const handleToggleValueCard = (value: keyof ValueCardsI) => {
+    setValueCards((prev) => ({
+      ...prev,
+      [value]: !prev[value],
+    }));
+  };
 
   return (
     <div className={styles.container}>
@@ -35,66 +55,44 @@ const Home: NextPage = () => {
           }}
         >
           <Stack className={styles.heroStack}>
-            {/* <Box
-              sx={{
-                backgroundColor: '#fff',
-                width: '50%',
-                padding: 10,
-              }}
-            > */}
             <Image
               alt="Texto com logo do Taishi Light Steel Frame"
               height={width < 768 ? 1000 : 400}
               src={Taishi}
             />
-            {/* </Box> */}
-            {/* <Box
-              sx={{
-                backgroundColor: 'green',
-                width: '60%',
-                padding: 10,
-              }}
-            >
-              Light Steel Frame
-            </Box> */}
-            {/* <div className={styles.title}>
-              <div className={styles.taishiTitle}>
-                <Image
-                  alt="Random unsplash image"
-                  height={width < 768 ? 800 : 170}
-                  src={Taishi}
-                />
-              </div>
-            </div>
-            <div className={styles.hero}>
-              <Title className={styles.lsfText} order={1}>
-                Light Steel Frame
-              </Title>
-            </div> */}
           </Stack>
         </div>
         <CpSection imageSrc={Hero2} text="home.main" />
         <section className={styles.valores}>
           <CpValueCard
             icon={<GiFlagObjective size={100} />}
+            id="mission"
+            onClick={handleToggleValueCard}
             title={formatMessage({
               id: 'missao',
               defaultMessage: 'Missao',
             })}
+            toggled={valueCards.mission}
           />
           <CpValueCard
             icon={<GiLighthouse size={100} />}
+            id="vision"
+            onClick={handleToggleValueCard}
             title={formatMessage({
               id: 'visao',
               defaultMessage: 'Visao',
             })}
+            toggled={valueCards.vision}
           />
           <CpValueCard
             icon={<FiTarget size={100} />}
+            id="values"
+            onClick={handleToggleValueCard}
             title={formatMessage({
               id: 'valores',
               defaultMessage: 'Valores',
             })}
+            toggled={valueCards.values}
           />
         </section>
         <section className={styles.accordionSection}>

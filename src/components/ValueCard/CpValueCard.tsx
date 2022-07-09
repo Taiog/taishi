@@ -1,22 +1,55 @@
 import { Card, Menu, Text } from '@mantine/core';
 import type { NextPage } from 'next';
+import { useMemo } from 'react';
+import { FormattedMessage } from 'react-intl';
+import { ValueCardsI } from '../../../pages';
 import styles from './CpValueCard.module.scss';
 
 interface CpValueCardProps {
   icon: any;
+  id: keyof ValueCardsI;
   text?: string;
   title: string;
+  toggled: boolean;
+  onClick: (value: keyof ValueCardsI) => void;
 }
 
 const CpValueCard: NextPage<CpValueCardProps> = ({
   icon,
-  text,
+  id,
+  onClick,
   title,
+  toggled,
 }) => {
+  const renderText = useMemo(() => {
+    return toggled ? (
+      <Text
+        className={styles.text}
+        style={{
+          fontFamily: 'Montserrat',
+          textAlign: 'justify',
+          padding: 10,
+          overflowY: 'scroll',
+        }}
+        weight="400"
+      >
+        <FormattedMessage id={`valueText.${id}`} />
+      </Text>
+    ) : (
+      <>
+        {icon}
+        <Text className={styles.cardText} weight="700">
+          {title}
+        </Text>
+      </>
+    );
+  }, [icon, id, title, toggled]);
+
   return (
     <div className={styles.card}>
       <Card
         className={styles.cardInner}
+        onClick={() => onClick(id)}
         p="xl"
         shadow="lg"
         style={{
@@ -28,10 +61,7 @@ const CpValueCard: NextPage<CpValueCardProps> = ({
           justifyContent: 'center',
         }}
       >
-        {icon}
-        <Text className={styles.cardText} weight="700">
-          {title}
-        </Text>
+        {renderText}
       </Card>
     </div>
   );
