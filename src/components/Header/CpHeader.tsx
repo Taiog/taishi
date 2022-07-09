@@ -18,8 +18,7 @@ const menuOptions = [
     label: 'header.home',
   },
   {
-    disabled: true,
-    href: '/about',
+    href: '/sobre',
     label: 'header.about',
   },
   {

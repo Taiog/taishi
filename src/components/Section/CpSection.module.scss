@@ -54,3 +54,11 @@
     flex: 1;
   }
 }
+
+.sectionText {
+  padding-top: 30px;
+  @media (min-width: 450px) {
+    flex: 1;
+    padding-top: 0;
+  }
+}
