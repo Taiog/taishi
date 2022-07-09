@@ -64,21 +64,6 @@ const CpLangMenu: NextPage = () => {
     >
       <Group
         className={styles.menuItem}
-        onClick={() => handleChangeLanguage(SupportedLocales.en)}
-      >
-        <ReactCountryFlag
-          countryCode="US"
-          style={{
-            width: '2em',
-            height: '2em',
-          }}
-          svg
-          title="US"
-        />
-        English
-      </Group>
-      <Group
-        className={styles.menuItem}
         onClick={() => handleChangeLanguage(SupportedLocales.pt)}
       >
         <ReactCountryFlag
@@ -94,6 +79,21 @@ const CpLangMenu: NextPage = () => {
       </Group>
       <Group
         className={styles.menuItem}
+        onClick={() => handleChangeLanguage(SupportedLocales.en)}
+      >
+        <ReactCountryFlag
+          countryCode="US"
+          style={{
+            width: '2em',
+            height: '2em',
+          }}
+          svg
+          title="US"
+        />
+        English
+      </Group>
+      {/* <Group
+        className={styles.menuItem}
         onClick={() => handleChangeLanguage(SupportedLocales.jp)}
       >
         <ReactCountryFlag
@@ -106,7 +106,7 @@ const CpLangMenu: NextPage = () => {
           title="JP"
         />
         日本語
-      </Group>
+      </Group> */}
     </Menu>
   );
 };

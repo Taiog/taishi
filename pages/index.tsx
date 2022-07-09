@@ -7,7 +7,7 @@ import { FiTarget } from 'react-icons/fi';
 import { GiFlagObjective, GiLighthouse } from 'react-icons/gi';
 
 import { useState } from 'react';
-import { useIntl } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 // import Taishi from '../assets/Nome Taishi solo.png';
 import Taishi from '../assets/Taishi horizontal pequeno.svg';
 import Hero2 from '../assets/lsf.jpg';
@@ -107,7 +107,7 @@ const Home: NextPage = () => {
                 fontFamily: 'Montserrat',
               }}
             >
-              Vantagens
+              <FormattedMessage id="index.benefits" />
             </Title>
             <CpAdvantagesSection />
             <Stack
@@ -116,7 +116,7 @@ const Home: NextPage = () => {
                 paddingTop: 30,
               })}
             >
-              <Button
+              {/* <Button
                 size="lg"
                 sx={{
                   backgroundColor: '#038C4C',
@@ -127,7 +127,7 @@ const Home: NextPage = () => {
                 }}
               >
                 Saiba mais
-              </Button>
+              </Button> */}
             </Stack>
           </Container>
         </section>

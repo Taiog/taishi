@@ -8,45 +8,39 @@ import {
   FaRegClock,
   FaThermometerQuarter,
 } from 'react-icons/fa';
+import { FormattedMessage } from 'react-intl';
 import styles from './CpAdvantagesSection.module.scss';
 
 const charactersList = [
   {
-    content:
-      'Por se tratar de uma estrutura leve, a fundação é menos exigida, economizando nessa etapa construtiva.',
+    content: 'index.benefits.lightness.text',
     icon: <FaFeatherAlt color="#038C4C" size={50} />,
-    label: 'Leveza',
+    label: 'index.benefits.lightness.label',
   },
-
   {
-    content:
-      'A maioria dos materiais são produzidos fora da obra, garantindo assim uma qualidade superior do produto, além de aumentar a produtividade no canteiro.',
+    content: 'index.benefits.industrialization.text',
     icon: <FaCogs color="#038C4C" size={50} />,
-    label: 'Industrialização',
+    label: 'index.benefits.industrialization.label',
   },
   {
-    content:
-      'A obra em LSF leva em geral 1/3 do tempo de execução de uma obra pelo método convencional (Concreto e blococerâmico).',
-    icon: <FaRegClock color="#038C4C" size={50} />,
-    label: 'Rapidez',
+    content: 'index.benefits.speed.text',
+    icon: <FaCogs color="#038C4C" size={50} />,
+    label: 'index.benefits.speed.label',
   },
   {
-    content:
-      'A estrutura do LSF consegue vencer grandes vãos e se adequa facilmente a qualquer projeto arquitetônico.',
-    icon: <FaExpandArrowsAlt color="#038C4C" size={50} />,
-    label: 'Versatilidade',
+    content: 'index.benefits.versatility.text',
+    icon: <FaCogs color="#038C4C" size={50} />,
+    label: 'index.benefits.versatility.label',
   },
   {
-    content:
-      'Tenha mais conforto e tranquilidade no seu lar, o LSF oferece um melhor desempenho térmico e acústico para sua edificação.',
-    icon: <FaThermometerQuarter color="#038C4C" size={50} />,
-    label: 'Desempenho',
+    content: 'index.benefits.performance.text',
+    icon: <FaCogs color="#038C4C" size={50} />,
+    label: 'index.benefits.performance.label',
   },
   {
-    content:
-      'O sistema faz parte da construção a seco, ou seja, o uso de recursos naturais e os desperdícios são muito reduzidos em relação a construção convencional.',
-    icon: <BiWorld color="#038C4C" size={50} />,
-    label: 'Sustentabilidade',
+    content: 'index.benefits.susteinability.text',
+    icon: <FaCogs color="#038C4C" size={50} />,
+    label: 'index.benefits.susteinability.label',
   },
 ];
 
@@ -60,12 +54,12 @@ const CpAdvantagesSection = () => {
           <Box className={styles.card}>
             {character.icon}
             <Text className={styles.title} size="xl" weight="700">
-              {character.label}
+              <FormattedMessage id={character.label} />
             </Text>
           </Box>
           <Box className={styles.textContainer}>
             <Text align="center" className={styles.text} weight="400">
-              {character.content}
+              <FormattedMessage id={character.content} />
             </Text>
           </Box>
         </Box>
