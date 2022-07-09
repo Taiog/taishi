@@ -24,22 +24,22 @@ const charactersList = [
   },
   {
     content: 'index.benefits.speed.text',
-    icon: <FaCogs color="#038C4C" size={50} />,
+    icon: <FaRegClock color="#038C4C" size={50} />,
     label: 'index.benefits.speed.label',
   },
   {
     content: 'index.benefits.versatility.text',
-    icon: <FaCogs color="#038C4C" size={50} />,
+    icon: <FaExpandArrowsAlt color="#038C4C" size={50} />,
     label: 'index.benefits.versatility.label',
   },
   {
     content: 'index.benefits.performance.text',
-    icon: <FaCogs color="#038C4C" size={50} />,
+    icon: <FaThermometerQuarter color="#038C4C" size={50} />,
     label: 'index.benefits.performance.label',
   },
   {
     content: 'index.benefits.susteinability.text',
-    icon: <FaCogs color="#038C4C" size={50} />,
+    icon: <BiWorld color="#038C4C" size={50} />,
     label: 'index.benefits.susteinability.label',
   },
 ];
