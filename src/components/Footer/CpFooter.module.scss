@@ -47,3 +47,12 @@
   color: $color-background;
   margin-top: $spacing-medium;
 }
+
+.mapAndAddress {
+  padding: 10px;
+
+    @media (min-width: 390px) {
+      display: flex;
+      flex-direction: 'row';
+    }
+}
