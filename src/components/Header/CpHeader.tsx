@@ -21,21 +21,21 @@ const menuOptions = [
     href: '/sobre',
     label: 'header.about',
   },
-  {
-    disabled: true,
-    href: '/services',
-    label: 'header.services',
-  },
+  // {
+  //   disabled: true,
+  //   href: '/services',
+  //   label: 'header.services',
+  // },
   {
     disabled: true,
     href: '/light-steel-frame',
     label: 'header.lsf',
   },
-  {
-    disabled: true,
-    href: '/blog',
-    label: 'header.blog',
-  },
+  // {
+  //   disabled: true,
+  //   href: '/blog',
+  //   label: 'header.blog',
+  // },
   {
     href: '/contato',
     label: 'header.contact',
@@ -52,14 +52,6 @@ const CpHeader: NextPage = () => {
 
   return (
     <nav className={styles.header}>
-      <Group className={styles.icons}>
-        <ActionIcon variant="hover">
-          <FaWhatsapp fill="#038C4C" size={25} />
-        </ActionIcon>
-        <ActionIcon variant="hover">
-          <FaInstagram fill="#038C4C" size={25} />
-        </ActionIcon>
-      </Group>
       <Group className={styles.headerContainer}>
         {width <= 768 ? (
           <div className={styles.logo}>
@@ -95,9 +87,9 @@ const CpHeader: NextPage = () => {
                   radius="sm"
                   size="lg"
                   style={{
-                    fontFamily: 'Montserrat',
+                    fontFamily: 'Roboto',
                     color: '#038C4C',
-                    fontWeight: '400',
+                    fontWeight: '600',
                   }}
                   variant="subtle"
                 >
@@ -109,6 +101,14 @@ const CpHeader: NextPage = () => {
         )}
         <div>
           <Group>
+            <Group className={styles.iconsDesktop}>
+              <ActionIcon variant="hover">
+                <FaWhatsapp fill="#038C4C" size={25} />
+              </ActionIcon>
+              <ActionIcon variant="hover">
+                <FaInstagram fill="#038C4C" size={25} />
+              </ActionIcon>
+            </Group>
             <CpLangMenu />
             {width < 768 && (
               <Menu

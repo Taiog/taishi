@@ -58,7 +58,14 @@ const CpAdvantagesSection = () => {
             </Text>
           </Box>
           <Box className={styles.textContainer}>
-            <Text align="center" className={styles.text} weight="400">
+            <Text
+              align="center"
+              className={styles.text}
+              style={{
+                textAlign: 'justify',
+              }}
+              weight="400"
+            >
               <FormattedMessage id={character.content} />
             </Text>
           </Box>

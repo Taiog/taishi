@@ -101,6 +101,7 @@ const Home: NextPage = () => {
               align="center"
               order={2}
               style={{
+                color: '#1A191A',
                 marginBottom: '1.5rem',
                 fontSize: '2.5rem',
                 textTransform: 'uppercase',
