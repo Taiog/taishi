@@ -1,4 +1,5 @@
 import {
+  ActionIcon,
   Button,
   Container,
   Group,
@@ -9,6 +10,7 @@ import {
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
 import Logo from '../../../assets/logoFooter.svg';
 import styles from './CpFooter.module.scss';
@@ -53,16 +55,41 @@ const CpFooter: NextPage = () => {
             }}
           >
             <Text className={styles.addressText}>
-              79 9 9801-1151
+              <Link
+                href="https://wa.me/message/CVLAWG4BTN23L1"
+                passHref
+              >
+                <a className={styles.icon} target="_blank">
+                  <ActionIcon variant="hover">
+                    <FaWhatsapp fill="#038C4C" size={25} />
+                  </ActionIcon>
+                  <Text className={styles.iconText}>
+                    79 9 9801-1151
+                  </Text>
+                </a>
+              </Link>
               <Space w="md" />
               79 3025-3003
             </Text>
             <Text className={styles.addressText}>
-              contato@taishilsf.com.br
+              <a href="mailto:contato@taishilsf.com.br">
+                contato@taishilsf.com.br
+              </a>
             </Text>
-            <Text className={styles.addressText}>
-              taishilsf.engenharia
-            </Text>
+            <Link
+              href="https://www.instagram.com/taishilsf.engenharia/"
+              passHref
+            >
+              <a className={styles.icon} target="_blank">
+                <ActionIcon variant="hover">
+                  <FaInstagram fill="#038C4C" size={25} />
+                </ActionIcon>
+                <Text className={styles.iconText}>
+                  taishilsf.engenharia
+                </Text>
+              </a>
+            </Link>
+
             <Text className={styles.addressText}>
               Rua Frei Paulo, 181
               <br></br>
