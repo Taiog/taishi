@@ -102,12 +102,26 @@ const CpHeader: NextPage = () => {
         <div>
           <Group>
             <Group className={styles.iconsDesktop}>
-              <ActionIcon variant="hover">
-                <FaWhatsapp fill="#038C4C" size={25} />
-              </ActionIcon>
-              <ActionIcon variant="hover">
-                <FaInstagram fill="#038C4C" size={25} />
-              </ActionIcon>
+              <Link
+                href="https://wa.me/message/CVLAWG4BTN23L1"
+                passHref
+              >
+                <a target="_blank">
+                  <ActionIcon variant="hover">
+                    <FaWhatsapp fill="#038C4C" size={25} />
+                  </ActionIcon>
+                </a>
+              </Link>
+              <Link
+                href="https://www.instagram.com/taishilsf.engenharia/"
+                passHref
+              >
+                <a target="_blank">
+                  <ActionIcon variant="hover">
+                    <FaInstagram fill="#038C4C" size={25} />
+                  </ActionIcon>
+                </a>
+              </Link>
             </Group>
             <CpLangMenu />
             {width < 768 && (
