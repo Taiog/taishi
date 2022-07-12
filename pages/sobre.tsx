@@ -1,19 +1,19 @@
 import { Title } from '@mantine/core';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import Tai from '../assets/Tai.png';
 import QuemSomos from '../assets/quemSomos2.jpg';
 import CpSection from '../src/components/Section/CpSection';
 import styles from '../styles/Sobre.module.scss';
 
 const Sobre: NextPage = () => {
+  const { formatMessage } = useIntl();
+
   return (
     <>
       <Head>
-        <title>
-          <FormattedMessage id="header.about" />
-        </title>
+        <title>{formatMessage({ id: 'header.about' })}</title>
         <link href="/favicon.ico" rel="icon" />
       </Head>
 
@@ -26,6 +26,20 @@ const Sobre: NextPage = () => {
         >
           <FormattedMessage id="header.about" />
         </Title> */}
+        <Title
+          align="center"
+          order={2}
+          style={{
+            paddingTop: '1.5rem',
+            backgroundColor: '#f2f2f2',
+            fontSize: '2.5rem',
+            textTransform: 'uppercase',
+            fontFamily: 'Montserrat',
+          }}
+        >
+          <FormattedMessage id="sobre.titulo" />
+        </Title>
+        <CpSection imageSrc={Tai} inverted text="sobre.quemSomos2" />
         <CpSection
           imageSrc={QuemSomos}
           imageStyle={{
@@ -36,7 +50,6 @@ const Sobre: NextPage = () => {
           }}
           text="sobre.quemSomos"
         />
-        <CpSection imageSrc={Tai} inverted text="sobre.quemSomos2" />
       </main>
     </>
   );
