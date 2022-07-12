@@ -1,4 +1,5 @@
 import { Card, Menu, Text } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 import type { NextPage } from 'next';
 import { useMemo } from 'react';
 import { FormattedMessage } from 'react-intl';
@@ -21,6 +22,8 @@ const CpValueCard: NextPage<CpValueCardProps> = ({
   title,
   toggled,
 }) => {
+  const { width } = useViewportSize();
+
   const renderText = useMemo(() => {
     return toggled ? (
       <Text
@@ -29,7 +32,7 @@ const CpValueCard: NextPage<CpValueCardProps> = ({
           fontFamily: 'Montserrat',
           textAlign: 'justify',
           padding: 10,
-          overflowY: 'scroll',
+          overflowY: width > 768 ? 'hidden' : 'scroll',
         }}
         weight="400"
       >
@@ -43,7 +46,7 @@ const CpValueCard: NextPage<CpValueCardProps> = ({
         </Text>
       </>
     );
-  }, [icon, id, title, toggled]);
+  }, [icon, id, title, toggled, width]);
 
   return (
     <div className={styles.card}>

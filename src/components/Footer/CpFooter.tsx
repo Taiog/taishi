@@ -2,7 +2,6 @@ import {
   ActionIcon,
   Button,
   Container,
-  Group,
   Space,
   Stack,
   Text,
@@ -10,7 +9,11 @@ import {
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaRegEnvelope,
+  FaWhatsapp,
+} from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
 import Logo from '../../../assets/logoFooter.svg';
 import styles from './CpFooter.module.scss';
@@ -60,7 +63,7 @@ const CpFooter: NextPage = () => {
                 passHref
               >
                 <a className={styles.icon} target="_blank">
-                  <ActionIcon variant="hover">
+                  <ActionIcon variant="transparent">
                     <FaWhatsapp fill="#038C4C" size={25} />
                   </ActionIcon>
                   <Text className={styles.iconText}>
@@ -72,8 +75,16 @@ const CpFooter: NextPage = () => {
               79 3025-3003
             </Text>
             <Text className={styles.addressText}>
-              <a href="mailto:contato@taishilsf.com.br">
-                contato@taishilsf.com.br
+              <a
+                className={styles.icon}
+                href="mailto:contato@taishilsf.com.br"
+              >
+                <ActionIcon variant="transparent">
+                  <FaRegEnvelope fill="#038C4C" size={25} />
+                </ActionIcon>
+                <Text className={styles.iconText}>
+                  contato@taishilsf.com.br
+                </Text>
               </a>
             </Text>
             <Link
@@ -81,7 +92,7 @@ const CpFooter: NextPage = () => {
               passHref
             >
               <a className={styles.icon} target="_blank">
-                <ActionIcon variant="hover">
+                <ActionIcon variant="transparent">
                   <FaInstagram fill="#038C4C" size={25} />
                 </ActionIcon>
                 <Text className={styles.iconText}>
