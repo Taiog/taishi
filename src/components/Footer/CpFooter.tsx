@@ -92,7 +92,10 @@ const CpFooter: NextPage = () => {
               passHref
             >
               <a className={styles.icon} target="_blank">
-                <ActionIcon variant="transparent">
+                <ActionIcon
+                  aria-roledescription=""
+                  variant="transparent"
+                >
                   <FaInstagram fill="#038C4C" size={25} />
                 </ActionIcon>
                 <Text className={styles.iconText}>

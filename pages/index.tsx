@@ -10,7 +10,7 @@ import { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 // import Taishi from '../assets/Nome Taishi solo.png';
 import Taishi from '../assets/Taishi horizontal pequeno.svg';
-import Hero2 from '../assets/lsf.jpg';
+import Hero2 from '../assets/quemSomos.jpg';
 import CpAdvantagesSection from '../src/components/AdvantagesSection/CpAdvantagesSection';
 import CpSection from '../src/components/Section/CpSection';
 import CpValueCard from '../src/components/ValueCard/CpValueCard';
@@ -62,7 +62,13 @@ const Home: NextPage = () => {
             />
           </Stack>
         </div>
-        <CpSection imageSrc={Hero2} text="home.main" />
+        <CpSection
+          imageSrc={Hero2}
+          imageStyle={{
+            height: '450px',
+          }}
+          text="home.main"
+        />
         <section className={styles.valores}>
           <CpValueCard
             icon={<GiFlagObjective size={100} />}
@@ -113,23 +119,10 @@ const Home: NextPage = () => {
             <CpAdvantagesSection />
             <Stack
               align="center"
-              sx={(theme) => ({
+              sx={(_) => ({
                 paddingTop: 30,
               })}
-            >
-              {/* <Button
-                size="lg"
-                sx={{
-                  backgroundColor: '#038C4C',
-                  ':hover': {
-                    backgroundColor: '#10492F',
-                    transition: 'all 0.2s ease-in-out',
-                  },
-                }}
-              >
-                Saiba mais
-              </Button> */}
-            </Stack>
+            ></Stack>
           </Container>
         </section>
       </main>
