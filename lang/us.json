@@ -3,6 +3,8 @@
   "contact.email": "Email",
   "contact.error": "Error sending message!",
   "contact.message": "Message",
+  "contact.modal": "Email sent successfully. We will be in touch soon. Thank you!",
+  "contact.modal.button": "Close",
   "contact.name": "Name",
   "contact.phone": "Phone",
   "contact.placeholder.city": "Your city",
