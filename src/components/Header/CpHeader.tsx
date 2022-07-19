@@ -27,7 +27,6 @@ const menuOptions = [
   //   label: 'header.services',
   // },
   {
-    disabled: true,
     href: '/light-steel-frame',
     label: 'header.lsf',
   },
@@ -83,7 +82,6 @@ const CpHeader: NextPage = () => {
               <Link href={option.href} key={option.href}>
                 <Button
                   color="teal"
-                  disabled={option.disabled}
                   radius="sm"
                   size="lg"
                   style={{
