@@ -167,8 +167,8 @@ const CpHeader: NextPage = () => {
                 transitionTimingFunction="ease"
               >
                 {menuOptions.map((option) => (
-                  <Menu.Item key={option.label}>
-                    <Link href={option.href}>
+                  <Link href={option.href} key={option.label}>
+                    <Menu.Item>
                       <Text
                         size="lg"
                         style={{
@@ -177,8 +177,8 @@ const CpHeader: NextPage = () => {
                       >
                         <FormattedMessage id={option.label} />
                       </Text>
-                    </Link>
-                  </Menu.Item>
+                    </Menu.Item>
+                  </Link>
                 ))}
               </Menu>
             )}
