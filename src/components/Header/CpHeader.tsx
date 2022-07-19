@@ -51,6 +51,27 @@ const CpHeader: NextPage = () => {
 
   return (
     <nav className={styles.header}>
+      {width <= 768 && (
+        <Group>
+          <Link href="https://wa.me/message/CVLAWG4BTN23L1" passHref>
+            <a target="_blank">
+              <ActionIcon variant="hover">
+                <FaWhatsapp fill="#038C4C" size={25} />
+              </ActionIcon>
+            </a>
+          </Link>
+          <Link
+            href="https://www.instagram.com/taishilsf.engenharia/"
+            passHref
+          >
+            <a target="_blank">
+              <ActionIcon variant="hover">
+                <FaInstagram fill="#038C4C" size={25} />
+              </ActionIcon>
+            </a>
+          </Link>
+        </Group>
+      )}
       <Group className={styles.headerContainer}>
         {width <= 768 ? (
           <div className={styles.logo}>
