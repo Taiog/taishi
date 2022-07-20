@@ -52,8 +52,6 @@ const Contato: NextPage = () => {
     }
   });
 
-  console.log('test');
-
   return (
     <>
       <Head>

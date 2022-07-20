@@ -12,6 +12,7 @@ import Image3 from '../assets/lsf/3.jpg';
 import Image4 from '../assets/lsf/4.jpg';
 import Image5 from '../assets/lsf/5.jpg';
 import Image6 from '../assets/lsf/6.jpg';
+import CpImageWithCaption from '../src/components/ImageWithCaption/CpImageWithCaption';
 
 import styles from '../styles/Lsf.module.scss';
 
@@ -43,6 +44,7 @@ const Lsf: NextPage = () => {
           >
             <FormattedMessage id="header.lsf" />
           </Title>
+          <Title order={3}>Estrutura</Title>
           <Text className={styles.paragraph}>
             O LSF consiste em um método construtivo racional, que tem
             como característica, uma estrutura constituída por perfis
@@ -71,7 +73,10 @@ const Lsf: NextPage = () => {
             sendo assim, a escolha dos materiais e a mão de obra
             influenciam diretamente no prazo de entrega do serviço.
           </Text>
-          <Image alt="LSF" src={Image0} />
+          <CpImageWithCaption
+            src={Image0}
+            text="Figura 1 - Desenho esquemático de uma residência em Light Steel Framing. Fonte: Crasto (2005)."
+          />
           <Text className={styles.paragraph}>
             O conceito da concepção estrutural do LSF é dividir a
             carga total em diversos elementos estruturais, assim,
@@ -89,7 +94,11 @@ const Lsf: NextPage = () => {
             obra. Os painéis estruturais têm a função de transmitir as
             cargas para a fundação, distribuindo-as uniformemente
           </Text>
-          <Image alt="LSF" src={Image1} />
+          <CpImageWithCaption
+            src={Image1}
+            text="Figura 2 -Transmissão de carga vertical à fundação. Fonte: Crasto (2005)."
+          />
+          <Title order={3}>Perfis</Title>
           <Text className={styles.paragraph}>
             O processo de fabricação do perfil de aço utilizado no
             sistema LSF é mecânico, sendo moldado à temperatura
@@ -108,7 +117,11 @@ const Lsf: NextPage = () => {
             projeto estrutural atenda aos critérios exigidos pela NBR
             14762.
           </Text>
-          <Image alt="LSF" src={Image2} />
+          <CpImageWithCaption
+            src={Image2}
+            text="Figura 3 -Perfis especiais e utilização. Fonte: NBR 15253:2014."
+          />
+          <Title order={3}>Fundação</Title>
           <Text className={styles.paragraph}>
             Quando se trata de fundação no LSF, a grande vantagem é a
             economia gerada pelo baixo peso próprio da estrutura,
@@ -121,6 +134,7 @@ const Lsf: NextPage = () => {
             manifestações patológicas devido à presença de umidade na
             estrutura
           </Text>
+          <Title order={3}>Ancoragem</Title>
           <Text className={styles.paragraph}>
             A ancoragem dos painéis na fundação ocorre em duas etapas,
             primeiramente é feito uma fixação provisória apenas para o
@@ -136,7 +150,11 @@ const Lsf: NextPage = () => {
             forma simples, apresentando maior carga e resistência,
             podendo ser reutilizado sem perder suas características.
           </Text>
-          <Image alt="LSF" src={Image3} />
+          <CpImageWithCaption
+            src={Image3}
+            text="Figura 4 -Tipos de chumbadores, da esquerda para a direita: Concretebolt, parabolt, químico. Fonte: Autor (2021)."
+          />
+          <Title order={3}>Composição da parede</Title>
           <Text className={styles.paragraph}>
             Sendo o fechamento vertical, o sistema que compõe as
             paredes internas e externas de uma edificação, no LSF os
@@ -148,7 +166,10 @@ const Lsf: NextPage = () => {
             placas aplicadas, possuem em sua maioria largura de 1,20m,
             múltiplo da modulação 400mm ou 600mm
           </Text>
-          <Image alt="LSF" src={Image4} />
+          <CpImageWithCaption
+            src={Image4}
+            text="Figura 5 - Exemplo de vedação vertical externa. Fonte: Diretriz SINAT Nº 009."
+          />
           <Text className={styles.paragraph}>
             Na imagem acima podemos ver um tipo de composição para a
             parede de LSF. Nela, podemos observar que internamente é
@@ -180,6 +201,7 @@ const Lsf: NextPage = () => {
             cimentícia que junto com uma tela de fibra de vidro serve
             como base para o acabamento.
           </Text>
+          <Title order={3}>Laje</Title>
           <Text className={styles.paragraph}>
             A estrutura do piso, também é confeccionada em perfis
             galvanizados, são montados horizontalmente e devem
@@ -187,10 +209,17 @@ const Lsf: NextPage = () => {
             as vigas de piso, fazem parte da base que irá receber os
             materiais que formam o contrapiso.
           </Text>
-          <Text>Laje seca</Text>
-          <Image alt="LSF" src={Image5} />
-          <Text>Laje úmida </Text>
-          <Image alt="LSF" src={Image6} />
+          <CpImageWithCaption
+            src={Image5}
+            text="Figura 6 - Desenho esquemático de laje seca. Fonte: CBCA (2012)."
+            upperText="Laje seca"
+          />
+          <CpImageWithCaption
+            src={Image6}
+            text="Figura 7 - Desenho esquemático de laje úmida. Fonte: CBCA (2012)."
+            upperText="Laje úmida"
+          />
+          <Title order={3}>Cobertura</Title>
           <Text className={styles.paragraph}>
             O sistema possibilita uma liberdade arquitetônica e
             soluções para as coberturas dos edifícios,
@@ -202,6 +231,9 @@ const Lsf: NextPage = () => {
             escolha das telhas que serão utilizadas na cobertura,
             podendo ser de qualquer material
           </Text>
+          <Title order={3}>
+            Instalações Hidráulicas e Elétricas{' '}
+          </Title>
           <Text className={styles.paragraph}>
             O emprego das instalações não sofre qualquer alteração de
             projeto e dimensionamento; os materiais utilizados podem
