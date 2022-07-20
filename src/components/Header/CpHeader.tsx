@@ -51,7 +51,7 @@ const CpHeader: NextPage = () => {
 
   return (
     <nav className={styles.header}>
-      {width <= 768 && (
+      {width <= 1100 && (
         <Group>
           <Link href="https://wa.me/message/CVLAWG4BTN23L1" passHref>
             <a target="_blank">
@@ -73,7 +73,7 @@ const CpHeader: NextPage = () => {
         </Group>
       )}
       <Group className={styles.headerContainer}>
-        {width <= 768 ? (
+        {width <= 1100 ? (
           <div className={styles.logo}>
             <Link href="/">
               <Image
@@ -97,7 +97,7 @@ const CpHeader: NextPage = () => {
           </div>
         )}
         <div />
-        {width >= 768 && (
+        {width >= 1100 && (
           <Group className={styles.navMenu} position="center">
             {menuOptions.map((option) => (
               <Link href={option.href} key={option.href}>
@@ -143,7 +143,7 @@ const CpHeader: NextPage = () => {
               </Link>
             </Group>
             <CpLangMenu />
-            {width < 768 && (
+            {width < 1100 && (
               <Menu
                 control={
                   <button className={styles.menuPressable}>

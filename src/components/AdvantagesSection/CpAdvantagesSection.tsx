@@ -48,7 +48,7 @@ const CpAdvantagesSection = () => {
   const { width } = useViewportSize();
 
   return (
-    <SimpleGrid cols={width < 768 ? 1 : 3}>
+    <SimpleGrid cols={width < 1100 ? 1 : 3}>
       {charactersList.map((character) => (
         <Box className={styles.container} key={character.label}>
           <Box className={styles.card}>

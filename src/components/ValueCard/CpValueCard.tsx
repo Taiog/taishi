@@ -32,7 +32,7 @@ const CpValueCard: NextPage<CpValueCardProps> = ({
           fontFamily: 'Montserrat',
           textAlign: 'justify',
           padding: 10,
-          overflowY: width > 768 ? 'hidden' : 'scroll',
+          overflowY: width > 1100 ? 'hidden' : 'scroll',
         }}
         weight="400"
       >

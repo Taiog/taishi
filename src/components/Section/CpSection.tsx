@@ -27,7 +27,7 @@ const CpSection: NextPage<CpSectionProps> = ({
       <div
         className={styles.section2container}
         style={
-          inverted && width > 768
+          inverted && width > 1100
             ? { flexDirection: 'row-reverse' }
             : {}
         }
@@ -40,7 +40,7 @@ const CpSection: NextPage<CpSectionProps> = ({
               height: '300px',
               position: 'relative',
               paddingLeft:
-                inverted && width > 768 ? '10px' : undefined,
+                inverted && width > 1100 ? '10px' : undefined,
               ...imageStyle,
             }}
           >

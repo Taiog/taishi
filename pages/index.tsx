@@ -57,7 +57,7 @@ const Home: NextPage = () => {
           <Stack className={styles.heroStack}>
             <Image
               alt="Texto com logo do Taishi Light Steel Frame"
-              height={width < 768 ? 1000 : 400}
+              height={width < 1100 ? 1000 : 400}
               src={Taishi}
             />
           </Stack>
