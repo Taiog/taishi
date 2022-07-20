@@ -39,7 +39,7 @@ const Contato: NextPage = () => {
 
   const handleSubmit = form.onSubmit((values) => {
     try {
-      const apiUrl = process.env.API_URL || 'http://localhost:3000';
+      const apiUrl = process.env.API_URL || 'http://localhost:4000';
       axios.post(`${apiUrl}/mail`, values);
 
       setIsBusy(true);
@@ -51,6 +51,8 @@ const Contato: NextPage = () => {
       return;
     }
   });
+
+  console.log('test');
 
   return (
     <>
