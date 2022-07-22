@@ -15,6 +15,7 @@ import {
   FaWhatsapp,
 } from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
+
 import Logo from '../../../assets/logoFooter.svg';
 import styles from './CpFooter.module.scss';
 

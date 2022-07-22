@@ -9,6 +9,7 @@ import {
   FaThermometerQuarter,
 } from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
+
 import styles from './CpAdvantagesSection.module.scss';
 
 const charactersList = [
@@ -58,14 +59,7 @@ const CpAdvantagesSection = () => {
             </Text>
           </Box>
           <Box className={styles.textContainer}>
-            <Text
-              align="center"
-              className={styles.text}
-              style={{
-                textAlign: 'justify',
-              }}
-              weight="400"
-            >
+            <Text align="center" className={styles.text} weight="400">
               <FormattedMessage id={character.content} />
             </Text>
           </Box>

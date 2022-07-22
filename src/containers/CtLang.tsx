@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import { IntlProvider } from 'react-intl';
+
 import IntlContext from '../contexts/useIntl';
 
 export enum SupportedLocales {
