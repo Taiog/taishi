@@ -44,221 +44,120 @@ const Lsf: NextPage = () => {
           >
             <FormattedMessage id="header.lsf" />
           </Title>
-          <Title order={3}>Estrutura</Title>
+          <Title order={3}>
+            <FormattedMessage id="lsf.title1" />
+          </Title>
           <Text className={styles.paragraph}>
-            O LSF consiste em um método construtivo racional, que tem
-            como característica, uma estrutura constituída por perfis
-            de aço galvanizados de pouca espessura, formados a frio e
-            utilizados nos componentes estruturais e não estruturais
-            da edificação. Seguindo as orientações da Norma Brasileira
-            – NBR 15253:2014, as bobinas de aço utilizadas na
-            fabricação, devem ser revestidas com zinco ou liga
-            alumínio-zinco pelo processo contínuo de imersão a quente.
+            <FormattedMessage id="lsf.text1.1" />
           </Text>
           <Text className={styles.paragraph}>
-            A proteção com zinco, dos perfis, tem como objetivo,
-            evitar a corrosão do aço, podendo empregá-lo em áreas com
-            a classe de agressividade elevada, como por exemplo, áreas
-            litorâneas.
+            <FormattedMessage id="lsf.text1.2" />
           </Text>
           <Text className={styles.paragraph}>
-            O LSF não se resume apenas às estruturas. O sistema é
-            dividido em diversos componentes e “subsistemas”, são
-            eles: estrutural, de fundação, de isolamento
-            termoacústico, de fechamento interno e externo, de
-            instalações elétricas e hidráulicas. Para que a construção
-            atinja seu desempenho desejado, é preciso que esses
-            subsistemas estejam corretamente harmonizados e os
-            materiais utilizados sejam ideais para cada situação,
-            sendo assim, a escolha dos materiais e a mão de obra
-            influenciam diretamente no prazo de entrega do serviço.
+            <FormattedMessage id="lsf.text1.3" />
           </Text>
           <CpImageWithCaption
             src={Image0}
-            text="Figura 1 - Desenho esquemático de uma residência em Light Steel Framing. Fonte: Crasto (2005)."
+            text={formatMessage({ id: 'lsf.image1' })}
           />
           <Text className={styles.paragraph}>
-            O conceito da concepção estrutural do LSF é dividir a
-            carga total em diversos elementos estruturais, assim,
-            resistindo cada um deles a uma pequena parcela. Dessa
-            maneira, é possível utilizar perfis menos espessos e
-            formar painéis mais leves e de fácil manipulação.
+            <FormattedMessage id="lsf.text1.4" />
           </Text>
           <Text className={styles.paragraph}>
-            As paredes constituídas pela estrutura são denominadas de
-            painéis estruturais e são formadas por vários perfis
-            espaçados em 400 ou 600 mm, cujo espaçamento é determinado
-            de acordo com projeto estrutural. Os espaçamentos estão
-            relacionados à modulação dos painéis, aumentando assim, a
-            eficiência e qualidade final, otimizando custos e mão de
-            obra. Os painéis estruturais têm a função de transmitir as
-            cargas para a fundação, distribuindo-as uniformemente
+            <FormattedMessage id="lsf.text1.5" />
           </Text>
           <CpImageWithCaption
             src={Image1}
-            text="Figura 2 -Transmissão de carga vertical à fundação. Fonte: Crasto (2005)."
+            text={formatMessage({ id: 'lsf.image2' })}
           />
-          <Title order={3}>Perfis</Title>
+          <Title order={3}>
+            <FormattedMessage id="lsf.title2" />
+          </Title>
           <Text className={styles.paragraph}>
-            O processo de fabricação do perfil de aço utilizado no
-            sistema LSF é mecânico, sendo moldado à temperatura
-            ambiente a partir de bobinas de aço, e sua resistência ao
-            escoamento (fy) deve ser maior do que 230 MPa, para os
-            perfis cuja função é estrutural, segundo as recomendações
-            da NBR 15253:2014. A espessura dos perfis utilizados no
-            LSF varia entre 0,8mm a 3mm.
+            <FormattedMessage id="lsf.text2.1" />
           </Text>
           <Text className={styles.paragraph}>
-            A padronização da largura dos perfis utilizados no LSF
-            para montantes, utilizando o perfil Ue, é de 90 mm, 140 mm
-            e 200mm, já para guias, utilizando o perfil U, as larguras
-            indicadas pela norma são 92mm, 142mm e 202mm. Os perfis
-            podem ter outras variações de dimensão, desde que o
-            projeto estrutural atenda aos critérios exigidos pela NBR
-            14762.
+            <FormattedMessage id="lsf.text2.2" />
           </Text>
           <CpImageWithCaption
             src={Image2}
-            text="Figura 3 -Perfis especiais e utilização. Fonte: NBR 15253:2014."
+            text={formatMessage({ id: 'lsf.image3' })}
           />
-          <Title order={3}>Fundação</Title>
+          <Title order={3}>
+            <FormattedMessage id="lsf.title3" />
+          </Title>
           <Text className={styles.paragraph}>
-            Quando se trata de fundação no LSF, a grande vantagem é a
-            economia gerada pelo baixo peso próprio da estrutura,
-            quando comparado com os métodos construtivos mais
-            utilizados. Para a maioria das construções residenciais,
-            são utilizadas fundações rasas, tipo radier ou sapata
-            corrida. A fundação é executada normalmente como em
-            qualquer outro método construtivo, deve-se ter o cuidado
-            em realizar uma boa impermeabilização para evitar
-            manifestações patológicas devido à presença de umidade na
-            estrutura
+            <FormattedMessage id="lsf.text3.1" />
           </Text>
-          <Title order={3}>Ancoragem</Title>
+          <Title order={3}>
+            <FormattedMessage id="lsf.title4" />
+          </Title>
           <Text className={styles.paragraph}>
-            A ancoragem dos painéis na fundação ocorre em duas etapas,
-            primeiramente é feito uma fixação provisória apenas para o
-            posicionamento do painel no local correto, após o
-            posicionamento dos demais painéis que compõem a estrutura
-            das paredes, os painéis são então alinhados em prumo e
-            esquadro, logo após, é feita a fixação definitiva por meio
-            de chumbadores, sendo eles mecânicos ou químicos
+            <FormattedMessage id="lsf.text4.1" />
           </Text>
           <Text className={styles.paragraph}>
-            Entre os chumbadores mecânicos, existe a opção por
-            parafusos especiais para concreto que fazem a fixação de
-            forma simples, apresentando maior carga e resistência,
-            podendo ser reutilizado sem perder suas características.
+            <FormattedMessage id="lsf.text4.2" />
           </Text>
           <CpImageWithCaption
             src={Image3}
-            text="Figura 4 -Tipos de chumbadores, da esquerda para a direita: Concretebolt, parabolt, químico. Fonte: Autor (2021)."
+            text={formatMessage({ id: 'lsf.image4' })}
           />
-          <Title order={3}>Composição da parede</Title>
+          <Title order={3}>
+            <FormattedMessage id="lsf.title5" />
+          </Title>
           <Text className={styles.paragraph}>
-            Sendo o fechamento vertical, o sistema que compõe as
-            paredes internas e externas de uma edificação, no LSF os
-            materiais de fechamento seguem os conceitos de baixo peso
-            próprio e obra seca. Outro conceito seguido, é o da
-            racionalização das vedações, buscando um maior grau de
-            industrialização. A modulação da estrutura deve ser
-            projetada visando a otimização com os fechamentos, as
-            placas aplicadas, possuem em sua maioria largura de 1,20m,
-            múltiplo da modulação 400mm ou 600mm
+            <FormattedMessage id="lsf.text5.1" />
           </Text>
           <CpImageWithCaption
             src={Image4}
-            text="Figura 5 - Exemplo de vedação vertical externa. Fonte: Diretriz SINAT Nº 009."
+            text={formatMessage({ id: 'lsf.image5' })}
           />
           <Text className={styles.paragraph}>
-            Na imagem acima podemos ver um tipo de composição para a
-            parede de LSF. Nela, podemos observar que internamente é
-            utilizado a placa de gesso acartonado, assim como é
-            utilizada no Drywall, sistema já conhecido pelos
-            brasileiros.
+            <FormattedMessage id="lsf.text5.2" />
           </Text>
           <Text className={styles.paragraph}>
-            Entre os perfis de aço, temos a aplicação de um material
-            isolante, podendo ser ele: lã de vidro, lã de rocha, lã de
-            PET, ou outro material que garanta um isolamento térmico e
-            acústico, sendo os citados os mais utilizados.
+            <FormattedMessage id="lsf.text5.3" />
           </Text>
           <Text className={styles.paragraph}>
-            A primeira camada do lado externo da parede é a barreira
-            impermeável, também chamada de manta hidrófuga, esse
-            componente é como um tecido que envolve toda a fachada da
-            edificação, não permitindo a passagem de água, porém
-            permite a saída do vapor de água de dentro para fora da
-            edificação, isso resulta no não acúmulo de umidade no
-            interior do ambiente.
+            <FormattedMessage id="lsf.text5.4" />
           </Text>
           <Text className={styles.paragraph}>
-            Após a manta hidrófuga, temos a placa cimentícia, sua
-            aplicação exige que sejam deixadas juntas entre as placas,
-            que posteriormente são tratadas com uma fita de fibra de
-            vidro e uma argamassa específica. Com as juntas tratadas é
-            feita então a aplicação do basecoat, que é uma argamassa
-            cimentícia que junto com uma tela de fibra de vidro serve
-            como base para o acabamento.
+            <FormattedMessage id="lsf.text5.5" />
           </Text>
-          <Title order={3}>Laje</Title>
+          <Title order={3}>
+            <FormattedMessage id="lsf.title6" />
+          </Title>
           <Text className={styles.paragraph}>
-            A estrutura do piso, também é confeccionada em perfis
-            galvanizados, são montados horizontalmente e devem
-            obedecer à modulação dos montantes. Os perfis que compõem
-            as vigas de piso, fazem parte da base que irá receber os
-            materiais que formam o contrapiso.
+            <FormattedMessage id="lsf.text6.1" />
           </Text>
           <CpImageWithCaption
             src={Image5}
-            text="Figura 6 - Desenho esquemático de laje seca. Fonte: CBCA (2012)."
-            upperText="Laje seca"
+            text={formatMessage({ id: 'lsf.image6' })}
+            upperText={formatMessage({ id: 'lsf.laje.seca' })}
           />
           <CpImageWithCaption
             src={Image6}
-            text="Figura 7 - Desenho esquemático de laje úmida. Fonte: CBCA (2012)."
-            upperText="Laje úmida"
+            text={formatMessage({ id: 'lsf.image7' })}
+            upperText={formatMessage({ id: 'lsf.laje.umida' })}
           />
-          <Title order={3}>Cobertura</Title>
-          <Text className={styles.paragraph}>
-            O sistema possibilita uma liberdade arquitetônica e
-            soluções para as coberturas dos edifícios,
-            independentemente do estilo adotado, seja cobertura plana
-            ou telhado inclinado, a versatilidade do LSF abrange todas
-            as formas. Para telhados inclinados, a composição se
-            assemelha à construção convencional, mas utilizando perfis
-            galvanizados no lugar da madeira. É mantida a liberdade na
-            escolha das telhas que serão utilizadas na cobertura,
-            podendo ser de qualquer material
-          </Text>
           <Title order={3}>
-            Instalações Hidráulicas e Elétricas{' '}
+            <FormattedMessage id="lsf.title7" />
           </Title>
           <Text className={styles.paragraph}>
-            O emprego das instalações não sofre qualquer alteração de
-            projeto e dimensionamento; os materiais utilizados podem
-            ser iguais aos aplicados na alvenaria. Sejam instalações
-            sanitárias, telefone, elétrica, TV ou aquecimento solar,
-            não é necessária adaptação de caminhamento nem de perda de
-            carga por se tratar de uma edificação em LSF. Deve-se
-            apenas tomar cuidados relacionados ao suporte e montagem
-            para fixação, pelo fato das paredes não possuírem massa em
-            seu interior.
+            <FormattedMessage id="lsf.text7.1" />
+          </Text>
+          <Title order={3}>
+            <FormattedMessage id="lsf.title8" />
+          </Title>
+          <Text className={styles.paragraph}>
+            <FormattedMessage id="lsf.text8.1" />
           </Text>
           <Text className={styles.paragraph}>
-            Fica claro que todo o procedimento de instalação dos
-            sistemas se torna mais prático, quando comparado ao
-            sistema convencional. Não há necessidade de rasgos na
-            parede para passagem de tubulações, deixando o serviço
-            mais limpo. A visualização por completo da instalação
-            permite a identificação precoce de interferências entre
-            sistemas, permitindo ainda testar os sistemas antes de
-            fechar a parede. Já em uso, quando uma manutenção for
-            necessária, a mesma repete as vantagens da fase de
-            construção, tornando o serviço prático e limpo de se
-            fazer.
+            <FormattedMessage id="lsf.text8.2" />
           </Text>
-          <Text className={styles.paragraph}>Referências:</Text>
+          <Text className={styles.paragraph}>
+            <FormattedMessage id="lsf.title9" />:
+          </Text>
           <Text className={styles.paragraph}>
             ________. NBR 15253 – Perfis de aço formados a frio, com
             revestimento metálico, para painéis reticulados em
