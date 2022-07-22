@@ -39,7 +39,7 @@ const Contato: NextPage = () => {
 
   const handleSubmit = form.onSubmit((values) => {
     try {
-      const apiUrl = process.env.API_URL || 'https://taishiapi.herokuapp.com/';
+      const apiUrl = process.env.API_URL || 'https://taishiapi.herokuapp.com';
       axios.post(`${apiUrl}/mail`, values);
 
       setIsBusy(true);
