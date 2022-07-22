@@ -38,6 +38,9 @@ const CpLangMenu: NextPage = () => {
                 style={{
                   width: '2em',
                   height: '2em',
+                  padding: 0,
+                  border:
+                    locale === 'jp' ? '1px solid #ccc' : undefined,
                 }}
                 svg
                 title={locale.toUpperCase()}
