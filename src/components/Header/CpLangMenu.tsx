@@ -92,7 +92,7 @@ const CpLangMenu: NextPage = () => {
         />
         English
       </Group>
-      {/* <Group
+      <Group
         className={styles.menuItem}
         onClick={() => handleChangeLanguage(SupportedLocales.jp)}
       >
@@ -106,7 +106,7 @@ const CpLangMenu: NextPage = () => {
           title="JP"
         />
         日本語
-      </Group> */}
+      </Group>
     </Menu>
   );
 };
