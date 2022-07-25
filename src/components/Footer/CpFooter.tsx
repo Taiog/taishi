@@ -5,25 +5,26 @@ import {
   Space,
   Stack,
   Text,
-} from '@mantine/core';
-import type { NextPage } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import {
-  FaInstagram,
-  FaRegEnvelope,
-  FaWhatsapp,
-} from 'react-icons/fa';
-import { FormattedMessage } from 'react-intl';
+} from "@mantine/core";
+import type { NextPage } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { FaInstagram, FaRegEnvelope, FaWhatsapp } from "react-icons/fa";
+import { FormattedMessage } from "react-intl";
 
-import Logo from '../../../assets/logoFooter.svg';
-import styles from './CpFooter.module.scss';
+import Logo from "../../../assets/logoFooter.svg";
+import styles from "./CpFooter.module.scss";
 
 const CpFooter: NextPage = () => {
   return (
     <footer className={styles.footerContainer}>
       <Container className={styles.footer} size="lg">
-        <div className={styles.imageContainer}>
+        <div
+          className={styles.imageContainer}
+          style={{
+            maxWidth: "400px",
+          }}
+        >
           <Image
             alt="Logo da empresa, um T de Taishi"
             height="100%"
@@ -49,37 +50,29 @@ const CpFooter: NextPage = () => {
           </div>
           <Stack
             style={{
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'flex-end',
-              padding: '1rem 0',
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "flex-end",
+              padding: "1rem 0",
             }}
           >
             <Text className={styles.addressText}>
-              <Link
-                href="https://wa.me/message/CVLAWG4BTN23L1"
-                passHref
-              >
+              <Link href="https://wa.me/message/CVLAWG4BTN23L1" passHref>
                 <a className={styles.icon} target="_blank">
                   <ActionIcon variant="transparent">
                     <FaWhatsapp fill="#038C4C" size={25} />
                   </ActionIcon>
-                  <Text className={styles.iconText}>
-                    79 9 9801-1151
-                  </Text>
+                  <Text className={styles.iconText}>79 9 9801-1151</Text>
                 </a>
               </Link>
               <Space w="md" />
               79 3025-3003
             </Text>
             <Text className={styles.addressText}>
-              <a
-                className={styles.icon}
-                href="mailto:contato@taishilsf.com.br"
-              >
+              <a className={styles.icon} href="mailto:contato@taishilsf.com.br">
                 <ActionIcon variant="transparent">
                   <FaRegEnvelope fill="#038C4C" size={25} />
                 </ActionIcon>
@@ -93,15 +86,10 @@ const CpFooter: NextPage = () => {
               passHref
             >
               <a className={styles.icon} target="_blank">
-                <ActionIcon
-                  aria-roledescription=""
-                  variant="transparent"
-                >
+                <ActionIcon aria-roledescription="" variant="transparent">
                   <FaInstagram fill="#038C4C" size={25} />
                 </ActionIcon>
-                <Text className={styles.iconText}>
-                  taishilsf.engenharia
-                </Text>
+                <Text className={styles.iconText}>taishilsf.engenharia</Text>
               </a>
             </Link>
 
@@ -113,11 +101,7 @@ const CpFooter: NextPage = () => {
               CEP 49015-260
             </Text>
             <Link href="/contato">
-              <Button
-                className={styles.contact}
-                size="lg"
-                variant="outline"
-              >
+              <Button className={styles.contact} size="lg" variant="outline">
                 <FormattedMessage id="header.contact" />
               </Button>
             </Link>

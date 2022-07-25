@@ -56,21 +56,6 @@
   width: 60%;
 }
 
-.valores {
-  background-color: $color-primary;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: $spacing-medium;
-  padding-top: $spacing-medium;
-
-  @media (min-width: 1100px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 100px;
-  }
-}
-
 .main {
   padding-top: 100px;
 }

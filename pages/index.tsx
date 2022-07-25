@@ -1,20 +1,16 @@
-import { Box, Button, Container, Stack, Title } from '@mantine/core';
-import { useViewportSize } from '@mantine/hooks';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import { FiTarget } from 'react-icons/fi';
-import { GiFlagObjective, GiLighthouse } from 'react-icons/gi';
+import { Container, Stack, Title } from "@mantine/core";
+import { useViewportSize } from "@mantine/hooks";
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
 
-import { useState } from 'react';
-import { FormattedMessage, useIntl } from 'react-intl';
-// import Taishi from '../assets/Nome Taishi solo.png';
-import Taishi from '../assets/Taishi horizontal pequeno.svg';
-import Hero2 from '../assets/quemSomos.jpg';
-import CpAdvantagesSection from '../src/components/AdvantagesSection/CpAdvantagesSection';
-import CpSection from '../src/components/Section/CpSection';
-import CpValueCard from '../src/components/ValueCard/CpValueCard';
-import styles from '../styles/Home.module.scss';
+import { FormattedMessage } from "react-intl";
+import Taishi from "../assets/Taishi horizontal pequeno.svg";
+import Hero2 from "../assets/quemSomos.jpg";
+import CpAdvantagesSection from "../src/components/AdvantagesSection/CpAdvantagesSection";
+import CpSection from "../src/components/Section/CpSection";
+import styles from "../styles/Home.module.scss";
+import CpValue from "../src/components/Values/CpValue";
 
 export interface ValueCardsI {
   mission: boolean;
@@ -23,21 +19,7 @@ export interface ValueCardsI {
 }
 
 const Home: NextPage = () => {
-  const { formatMessage } = useIntl();
   const { width } = useViewportSize();
-
-  const [valueCards, setValueCards] = useState<ValueCardsI>({
-    mission: false,
-    values: false,
-    vision: false,
-  });
-
-  const handleToggleValueCard = (value: keyof ValueCardsI) => {
-    setValueCards((prev) => ({
-      ...prev,
-      [value]: !prev[value],
-    }));
-  };
 
   return (
     <div className={styles.container}>
@@ -65,53 +47,22 @@ const Home: NextPage = () => {
         <CpSection
           imageSrc={Hero2}
           imageStyle={{
-            height: '450px',
+            height: "450px",
           }}
           text="home.main"
         />
-        <section className={styles.valores}>
-          <CpValueCard
-            icon={<GiFlagObjective size={100} />}
-            id="mission"
-            onClick={handleToggleValueCard}
-            title={formatMessage({
-              id: 'missao',
-              defaultMessage: 'Missao',
-            })}
-            toggled={valueCards.mission}
-          />
-          <CpValueCard
-            icon={<GiLighthouse size={100} />}
-            id="vision"
-            onClick={handleToggleValueCard}
-            title={formatMessage({
-              id: 'visao',
-              defaultMessage: 'Visao',
-            })}
-            toggled={valueCards.vision}
-          />
-          <CpValueCard
-            icon={<FiTarget size={100} />}
-            id="values"
-            onClick={handleToggleValueCard}
-            title={formatMessage({
-              id: 'valores',
-              defaultMessage: 'Valores',
-            })}
-            toggled={valueCards.values}
-          />
-        </section>
+        <CpValue />
         <section className={styles.accordionSection}>
           <Container>
             <Title
               align="center"
               order={2}
               style={{
-                color: '#1A191A',
-                marginBottom: '1.5rem',
-                fontSize: '2.5rem',
-                textTransform: 'uppercase',
-                fontFamily: 'Montserrat',
+                color: "#1A191A",
+                marginBottom: "1.5rem",
+                fontSize: "2.5rem",
+                textTransform: "uppercase",
+                fontFamily: "Montserrat",
               }}
             >
               <FormattedMessage id="index.benefits" />

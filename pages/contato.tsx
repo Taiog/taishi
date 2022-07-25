@@ -7,14 +7,14 @@ import {
   TextInput,
   Textarea,
   Title,
-} from '@mantine/core';
-import { useForm } from '@mantine/form';
-import axios from 'axios';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useState } from 'react';
-import { FormattedMessage, useIntl } from 'react-intl';
-import styles from '../styles/Contato.module.scss';
+} from "@mantine/core";
+import { useForm } from "@mantine/form";
+import axios from "axios";
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+import styles from "../styles/Contato.module.scss";
 
 const Contato: NextPage = () => {
   const { formatMessage } = useIntl();
@@ -23,23 +23,22 @@ const Contato: NextPage = () => {
 
   const form = useForm({
     initialValues: {
-      city: '',
-      email: '',
-      message: '',
-      name: '',
-      phone: '',
-      subject: '',
+      city: "",
+      email: "",
+      message: "",
+      name: "",
+      phone: "",
+      subject: "",
     },
 
     validate: {
-      email: (value) =>
-        /^\S+@\S+$/.test(value) ? null : 'Invalid email',
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
     },
   });
 
   const handleSubmit = form.onSubmit((values) => {
     try {
-      const apiUrl = process.env.API_URL || 'https://taishiapi.herokuapp.com';
+      const apiUrl = process.env.API_URL || "https://taishiapi.herokuapp.com";
       axios.post(`${apiUrl}/mail`, values);
 
       setIsBusy(true);
@@ -55,7 +54,7 @@ const Contato: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{formatMessage({ id: 'header.contact' })}</title>
+        <title>Taishi LSF | {formatMessage({ id: "header.contact" })}</title>
         <link href="/favicon.ico" rel="icon" />
       </Head>
 
@@ -75,8 +74,8 @@ const Contato: NextPage = () => {
           </Text>
           <Box
             sx={{
-              display: 'flex',
-              justifyContent: 'flex-end',
+              display: "flex",
+              justifyContent: "flex-end",
               padding: 5,
               marginTop: 25,
             }}
@@ -86,7 +85,7 @@ const Contato: NextPage = () => {
               radius="xs"
               size="md"
               style={{
-                backgroundColor: '#038C4C',
+                backgroundColor: "#038C4C",
               }}
               uppercase
             >
@@ -101,7 +100,7 @@ const Contato: NextPage = () => {
           <Title
             order={1}
             style={{
-              paddingBottom: '10px',
+              paddingBottom: "10px",
             }}
           >
             <FormattedMessage id="header.contact" />
@@ -109,68 +108,68 @@ const Contato: NextPage = () => {
           <form onSubmit={handleSubmit}>
             <TextInput
               className={styles.input}
-              label={formatMessage({ id: 'contact.name' })}
+              label={formatMessage({ id: "contact.name" })}
               placeholder={formatMessage({
-                id: 'contact.placeholder.name',
+                id: "contact.placeholder.name",
               })}
               radius="xs"
               required
               size="lg"
-              {...form.getInputProps('name')}
+              {...form.getInputProps("name")}
             />
             <TextInput
               className={styles.input}
-              label={formatMessage({ id: 'contact.email' })}
+              label={formatMessage({ id: "contact.email" })}
               placeholder={formatMessage({
-                id: 'contact.placeholder.email',
+                id: "contact.placeholder.email",
               })}
               radius="xs"
               required
               size="lg"
-              {...form.getInputProps('email')}
+              {...form.getInputProps("email")}
             />
             <TextInput
               className={styles.input}
-              label={formatMessage({ id: 'contact.phone' })}
+              label={formatMessage({ id: "contact.phone" })}
               placeholder={formatMessage({
-                id: 'contact.placeholder.phone',
+                id: "contact.placeholder.phone",
               })}
               radius="xs"
               size="lg"
-              {...form.getInputProps('phone')}
+              {...form.getInputProps("phone")}
             />
             <TextInput
               className={styles.input}
-              label={formatMessage({ id: 'contact.city' })}
+              label={formatMessage({ id: "contact.city" })}
               placeholder={formatMessage({
-                id: 'contact.placeholder.city',
+                id: "contact.placeholder.city",
               })}
               radius="xs"
               size="lg"
-              {...form.getInputProps('city')}
+              {...form.getInputProps("city")}
             />
             <TextInput
               className={styles.input}
-              label={formatMessage({ id: 'contact.subject' })}
+              label={formatMessage({ id: "contact.subject" })}
               placeholder={formatMessage({
-                id: 'contact.placeholder.subject',
+                id: "contact.placeholder.subject",
               })}
               radius="xs"
               required
               size="lg"
-              {...form.getInputProps('subject')}
+              {...form.getInputProps("subject")}
             />
             <Textarea
               className={styles.input}
-              label={formatMessage({ id: 'contact.message' })}
+              label={formatMessage({ id: "contact.message" })}
               minRows={5}
               placeholder={formatMessage({
-                id: 'contact.placeholder.message',
+                id: "contact.placeholder.message",
               })}
               radius="xs"
               required
               size="lg"
-              {...form.getInputProps('message')}
+              {...form.getInputProps("message")}
             />
             <Button
               color="green"
@@ -178,7 +177,7 @@ const Contato: NextPage = () => {
               radius="xs"
               size="md"
               style={{
-                backgroundColor: '#038C4C',
+                backgroundColor: "#038C4C",
               }}
               type="submit"
               uppercase

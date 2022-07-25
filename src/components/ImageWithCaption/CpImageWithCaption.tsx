@@ -1,7 +1,7 @@
-import { Box, Text } from '@mantine/core';
-import type { NextPage } from 'next';
-import Image, { StaticImageData } from 'next/image';
-import styles from './CpImageWithCaption.module.scss';
+import { Box, Text } from "@mantine/core";
+import type { NextPage } from "next";
+import Image, { StaticImageData } from "next/image";
+import styles from "./CpImageWithCaption.module.scss";
 
 interface CpImageWithCaptionProps {
   src: StaticImageData;
@@ -18,18 +18,18 @@ const CpImageWithCaption: NextPage<CpImageWithCaptionProps> = ({
     <>
       <Box
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
         <Box>
-          <Text>{upperText}</Text>
+          <Text weight={700}>{upperText}</Text>
           <Image alt={text} src={src} />
           <Text
             sx={{
               paddingBottom: 20,
-              alignSelf: 'center',
+              alignSelf: "center",
             }}
           >
             {text}
