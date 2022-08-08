@@ -1,8 +1,8 @@
-import { useViewportSize } from '@mantine/hooks';
-import type { NextPage } from 'next';
-import Image from 'next/image';
-import { useIntl } from 'react-intl';
-import styles from './CpSection.module.scss';
+import { useViewportSize } from "@mantine/hooks";
+import type { NextPage } from "next";
+import Image from "next/image";
+import { useIntl } from "react-intl";
+import styles from "./CpSection.module.scss";
 
 interface CpSectionProps {
   imageSrc?: any;
@@ -26,26 +26,21 @@ const CpSection: NextPage<CpSectionProps> = ({
     <section className={styles.section2} style={style}>
       <div
         className={styles.section2container}
-        style={
-          inverted && width > 1100
-            ? { flexDirection: 'row-reverse' }
-            : {}
-        }
+        style={inverted && width > 1100 ? { flexDirection: "row-reverse" } : {}}
       >
         {imageSrc && (
           <div
             className={styles.flexOne}
             style={{
-              width: '100%',
-              height: '300px',
-              position: 'relative',
-              paddingLeft:
-                inverted && width > 1100 ? '10px' : undefined,
+              width: "100%",
+              height: "300px",
+              position: "relative",
+              paddingLeft: inverted && width > 1100 ? "10px" : undefined,
               ...imageStyle,
             }}
           >
             <Image
-              alt="construcao de light steel frame"
+              alt="Construção de light steel frame"
               layout="fill"
               objectFit="contain"
               src={imageSrc}
@@ -55,8 +50,8 @@ const CpSection: NextPage<CpSectionProps> = ({
         <div className={styles.sectionText}>
           <span
             style={{
-              fontFamily: 'Montserrat',
-              textAlign: 'justify',
+              fontFamily: "Montserrat",
+              textAlign: "justify",
             }}
           >
             {formatMessage({ id: text })}

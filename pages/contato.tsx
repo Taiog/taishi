@@ -55,6 +55,7 @@ const Contato: NextPage = () => {
     <>
       <Head>
         <title>Taishi LSF | {formatMessage({ id: "header.contact" })}</title>
+        <meta content="Contato Taishi Light Steel Frame" name="description" />
         <link href="/favicon.ico" rel="icon" />
       </Head>
 

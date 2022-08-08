@@ -9,8 +9,8 @@ import Taishi from "../assets/Taishi horizontal pequeno.svg";
 import Hero2 from "../assets/quemSomos.jpg";
 import CpAdvantagesSection from "../src/components/AdvantagesSection/CpAdvantagesSection";
 import CpSection from "../src/components/Section/CpSection";
-import styles from "../styles/Home.module.scss";
 import CpValue from "../src/components/Values/CpValue";
+import styles from "../styles/Home.module.scss";
 
 export interface ValueCardsI {
   mission: boolean;
@@ -25,8 +25,12 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Taishi LSF</title>
-        <meta content="Taishi Light Steel Frame" name="description" />
+        <meta
+          content="A Taishi traz para Sergipe uma alternativa construtiva veloz, sustentável e de alta qualidade. Buscando maior produtividade e a industrialização da construção civil, aplicamos o sistema construtivo Light Steel Frame em construções residências, comerciais, coberturas, ampliações, mezaninos, galpões, entre outros."
+          name="description"
+        />
         <link href="/favicon.ico" rel="icon" />
+        <meta content="nofollow" name="robots" />
       </Head>
 
       <main className={styles.main}>
