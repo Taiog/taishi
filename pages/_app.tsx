@@ -7,9 +7,9 @@ import CtLang from "../src/containers/CtLang";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  if (process.env.PROD && process.env.GA_ID) {
-    ReactGA.initialize(process.env.GA_ID);
-  }
+  // if (process.env.PROD && process.env.GA_ID) {
+  ReactGA.initialize("G-ZD0BWQSMX8");
+  // }
 
   return (
     <MantineProvider
