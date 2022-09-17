@@ -1,10 +1,10 @@
-import { Card, Menu, Text } from '@mantine/core';
-import { useViewportSize } from '@mantine/hooks';
-import type { NextPage } from 'next';
-import { useMemo } from 'react';
-import { FormattedMessage } from 'react-intl';
-import { ValueCardsI } from '../../../pages';
-import styles from './CpValueCard.module.scss';
+import { Card, Menu, Text } from "@mantine/core";
+import { useViewportSize } from "@mantine/hooks";
+import type { NextPage } from "next";
+import { useMemo } from "react";
+import { FormattedMessage } from "react-intl";
+import { ValueCardsI } from "../../../pages";
+import styles from "./CpValueCard.module.scss";
 
 interface CpValueCardProps {
   icon: any;
@@ -29,10 +29,10 @@ const CpValueCard: NextPage<CpValueCardProps> = ({
       <Text
         className={styles.text}
         style={{
-          fontFamily: 'Montserrat',
-          textAlign: 'justify',
+          fontFamily: "Montserrat",
+          textAlign: "justify",
           padding: 10,
-          overflowY: width > 1100 ? 'hidden' : 'scroll',
+          overflowY: width > 1100 ? "hidden" : "scroll",
         }}
         weight="400"
       >
@@ -52,16 +52,17 @@ const CpValueCard: NextPage<CpValueCardProps> = ({
     <div className={styles.card}>
       <Card
         className={styles.cardInner}
+        id={id}
         onClick={() => onClick(id)}
         p="xl"
         shadow="lg"
         style={{
           boxShadow:
-            ' 0 1px 3px rgb(0 0 0 / 25%), rgb(0 0 0 / 25%) 0px 28px 23px -7px, rgb(0 0 0 / 4%) 0px 12px 12px -7px',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
+            " 0 1px 3px rgb(0 0 0 / 25%), rgb(0 0 0 / 25%) 0px 28px 23px -7px, rgb(0 0 0 / 4%) 0px 12px 12px -7px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         {renderText}

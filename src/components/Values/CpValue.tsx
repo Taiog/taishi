@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
-import { useIntl } from "react-intl";
-import styles from "./CpValue.module.scss";
+import { useState } from "react";
 import { FiTarget } from "react-icons/fi";
 import { GiFlagObjective, GiLighthouse } from "react-icons/gi";
+import { useIntl } from "react-intl";
 import CpValueCard from "../ValueCard/CpValueCard";
-import { useState } from "react";
+import styles from "./CpValue.module.scss";
 
 export interface ValueCardsI {
   mission: boolean;

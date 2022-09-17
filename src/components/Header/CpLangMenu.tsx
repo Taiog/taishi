@@ -1,14 +1,14 @@
-import { Group, Menu, Text } from '@mantine/core';
-import type { NextPage } from 'next';
-import { useContext, useState } from 'react';
-import ReactCountryFlag from 'react-country-flag';
+import { Group, Menu, Text } from "@mantine/core";
+import type { NextPage } from "next";
+import { useContext, useState } from "react";
+import ReactCountryFlag from "react-country-flag";
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
-} from 'react-icons/md';
-import { SupportedLocales } from '../../containers/CtLang';
-import IntlContext from '../../contexts/useIntl';
-import styles from './CpLangMenu.module.scss';
+} from "react-icons/md";
+import { SupportedLocales } from "../../containers/CtLang";
+import IntlContext from "../../contexts/useIntl";
+import styles from "./CpLangMenu.module.scss";
 
 const CpLangMenu: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,21 +26,20 @@ const CpLangMenu: NextPage = () => {
   return (
     <Menu
       control={
-        <button className={styles.menuPressable}>
+        <button className={styles.menuPressable} id="lang">
           <>
             <Group
               style={{
-                gap: '2px',
+                gap: "2px",
               }}
             >
               <ReactCountryFlag
                 countryCode={locale.toUpperCase()}
                 style={{
-                  width: '2em',
-                  height: '2em',
+                  width: "2em",
+                  height: "2em",
                   padding: 0,
-                  border:
-                    locale === 'jp' ? '1px solid #ccc' : undefined,
+                  border: locale === "jp" ? "1px solid #ccc" : undefined,
                 }}
                 svg
                 title={locale.toUpperCase()}
@@ -58,9 +57,9 @@ const CpLangMenu: NextPage = () => {
       onOpen={toggleDrawer}
       opened={isOpen}
       style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
       }}
       transitionDuration={200}
       transitionTimingFunction="ease"
@@ -72,8 +71,8 @@ const CpLangMenu: NextPage = () => {
         <ReactCountryFlag
           countryCode="BR"
           style={{
-            width: '2em',
-            height: '2em',
+            width: "2em",
+            height: "2em",
           }}
           svg
           title="BR"
@@ -82,13 +81,14 @@ const CpLangMenu: NextPage = () => {
       </Group>
       <Group
         className={styles.menuItem}
+        id="eng"
         onClick={() => handleChangeLanguage(SupportedLocales.en)}
       >
         <ReactCountryFlag
           countryCode="US"
           style={{
-            width: '2em',
-            height: '2em',
+            width: "2em",
+            height: "2em",
           }}
           svg
           title="US"
@@ -102,8 +102,8 @@ const CpLangMenu: NextPage = () => {
         <ReactCountryFlag
           countryCode="JP"
           style={{
-            width: '2em',
-            height: '2em',
+            width: "2em",
+            height: "2em",
           }}
           svg
           title="JP"

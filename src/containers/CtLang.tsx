@@ -1,25 +1,25 @@
-import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
-import { IntlProvider } from 'react-intl';
+import type { NextPage } from "next";
+import { useEffect, useState } from "react";
+import { IntlProvider } from "react-intl";
 
-import IntlContext from '../contexts/useIntl';
+import IntlContext from "../contexts/useIntl";
 
 export enum SupportedLocales {
-  en = 'us',
-  pt = 'br',
-  jp = 'jp',
+  en = "us",
+  pt = "br",
+  jp = "jp",
 }
 
 const loadMessages = async (locale: SupportedLocales) => {
   switch (locale) {
-    case 'br':
-      return await import('../../lang/br.json');
-    case 'jp':
-      return await import('../../lang/jp.json');
-    case 'us':
-      return await import('../../lang/us.json');
+    case "br":
+      return await import("../../lang/br.json");
+    case "jp":
+      return await import("../../lang/jp.json");
+    case "us":
+      return await import("../../lang/us.json");
     default:
-      return await import('../../lang/jp.json');
+      return await import("../../lang/br.json");
   }
 };
 
@@ -50,9 +50,7 @@ const CtLang: NextPage<CtLangProps> = ({ children }) => {
   }
 
   return (
-    <IntlContext.Provider
-      value={{ locale, setLocale: handleChangeLocale }}
-    >
+    <IntlContext.Provider value={{ locale, setLocale: handleChangeLocale }}>
       <IntlProvider
         defaultLocale={SupportedLocales.pt}
         locale={locale}

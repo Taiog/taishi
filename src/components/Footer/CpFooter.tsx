@@ -85,7 +85,7 @@ const CpFooter: NextPage = () => {
               href="https://www.instagram.com/taishilsf.engenharia/"
               passHref
             >
-              <a className={styles.icon} target="_blank">
+              <a className={styles.icon} id={"1"} target="_blank">
                 <ActionIcon aria-roledescription="" variant="transparent">
                   <FaInstagram fill="#038C4C" size={25} />
                 </ActionIcon>

@@ -1,25 +1,27 @@
-import { ActionIcon, Button, Group, Menu, Text } from '@mantine/core';
-import { useViewportSize } from '@mantine/hooks';
-import type { NextPage } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import { AiOutlineClose } from 'react-icons/ai';
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { FormattedMessage } from 'react-intl';
-import Logo from '../../../assets/logo.svg';
-import styles from './CpHeader.module.scss';
-import CpLangMenu from './CpLangMenu';
+import { ActionIcon, Button, Group, Menu, Text } from "@mantine/core";
+import { useViewportSize } from "@mantine/hooks";
+import type { NextPage } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FormattedMessage } from "react-intl";
+import Logo from "../../../assets/logo.svg";
+import styles from "./CpHeader.module.scss";
+import CpLangMenu from "./CpLangMenu";
 
 const menuOptions = [
   {
-    href: '/',
-    label: 'header.home',
+    href: "/",
+    id: "home",
+    label: "header.home",
   },
   {
-    href: '/sobre',
-    label: 'header.about',
+    href: "/sobre",
+    id: "about",
+    label: "header.about",
   },
   // {
   //   disabled: true,
@@ -27,8 +29,9 @@ const menuOptions = [
   //   label: 'header.services',
   // },
   {
-    href: '/light-steel-frame',
-    label: 'header.lsf',
+    href: "/light-steel-frame",
+    id: "lsf",
+    label: "header.lsf",
   },
   // {
   //   disabled: true,
@@ -36,8 +39,9 @@ const menuOptions = [
   //   label: 'header.blog',
   // },
   {
-    href: '/contato',
-    label: 'header.contact',
+    href: "/contato",
+    id: "contact",
+    label: "header.contact",
   },
 ];
 
@@ -60,10 +64,7 @@ const CpHeader: NextPage = () => {
               </ActionIcon>
             </a>
           </Link>
-          <Link
-            href="https://www.instagram.com/taishilsf.engenharia/"
-            passHref
-          >
+          <Link href="https://www.instagram.com/taishilsf.engenharia/" passHref>
             <a target="_blank">
               <ActionIcon variant="hover">
                 <FaInstagram fill="#038C4C" size={25} />
@@ -102,13 +103,14 @@ const CpHeader: NextPage = () => {
             {menuOptions.map((option) => (
               <Link href={option.href} key={option.href}>
                 <Button
+                  className={option.id}
                   color="teal"
                   radius="sm"
                   size="lg"
                   style={{
-                    fontFamily: 'Roboto',
-                    color: '#038C4C',
-                    fontWeight: '600',
+                    fontFamily: "Roboto",
+                    color: "#038C4C",
+                    fontWeight: "600",
                   }}
                   variant="subtle"
                 >
@@ -121,10 +123,7 @@ const CpHeader: NextPage = () => {
         <div>
           <Group>
             <Group className={styles.iconsDesktop}>
-              <Link
-                href="https://wa.me/message/CVLAWG4BTN23L1"
-                passHref
-              >
+              <Link href="https://wa.me/message/CVLAWG4BTN23L1" passHref>
                 <a target="_blank">
                   <ActionIcon variant="hover">
                     <FaWhatsapp fill="#038C4C" size={25} />
@@ -148,15 +147,9 @@ const CpHeader: NextPage = () => {
                 control={
                   <button className={styles.menuPressable}>
                     {isOpen ? (
-                      <AiOutlineClose
-                        className={styles.menu}
-                        size={40}
-                      />
+                      <AiOutlineClose className={styles.menu} size={40} />
                     ) : (
-                      <GiHamburgerMenu
-                        className={styles.menu}
-                        size={40}
-                      />
+                      <GiHamburgerMenu className={styles.menu} size={40} />
                     )}
                   </button>
                 }
@@ -172,7 +165,7 @@ const CpHeader: NextPage = () => {
                       <Text
                         size="lg"
                         style={{
-                          fontFamily: 'Montserrat',
+                          fontFamily: "Montserrat",
                         }}
                       >
                         <FormattedMessage id={option.label} />
